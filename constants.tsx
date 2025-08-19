@@ -1,0 +1,133 @@
+import React from 'react';
+import type { Project, Feature, Testimonial } from './types';
+
+const DocumentChartBarIcon = (props: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+    </svg>
+);
+
+const SparklesIcon = (props: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
+    </svg>
+);
+
+const LinkIcon = (props: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+    </svg>
+);
+
+const CpuChipIcon = (props: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 21v-1.5M15.75 3v1.5M19.5 8.25h1.5m-18 0h1.5M19.5 12h1.5m-18 0h1.5m15 3.75h1.5m-18 0h1.5M15.75 21v-1.5m-4.5-15v1.5m0 15v-1.5m-3.75-12H6m12 0h-1.5M9.75 12H6m9.75 0h-3.75m-3.75 3.75H6m9.75 0h-3.75M9 3.75H6.75A2.25 2.25 0 0 0 4.5 6v12a2.25 2.25 0 0 0 2.25 2.25h10.5A2.25 2.25 0 0 0 19.5 18V6A2.25 2.25 0 0 0 17.25 3.75H15M9 7.5h6v9H9v-9Z" />
+    </svg>
+);
+
+const WrenchScrewdriverIcon = (props: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.495-2.495a1.125 1.125 0 0 1 1.591 0l3.75 3.75a1.125 1.125 0 0 1 0 1.591l-2.495 2.495m-6.236 2.495L5.841 21a2.25 2.25 0 0 1-3.182-3.182l2.495-2.495L11.42 15.17Zm-6.236-2.495L5.186 12.675 2.25 9.75l-1.125 1.125a2.25 2.25 0 0 0 0 3.182l2.495 2.495Z" />
+    </svg>
+);
+
+const PhotoIcon = (props: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+    </svg>
+);
+
+
+export const PROJECTS: Project[] = [
+  {
+    id: 'seo-orchestrator',
+    name: 'SEO Orchestrator',
+    description: 'The master tool to coordinate your entire SEO strategy, from keywords to content, ensuring topical authority.',
+    liveUrls: [{ name: 'Launch App', url: 'https://seo-orchestrator.affiliatemarketingforsuccess.com' }],
+    icon: <DocumentChartBarIcon />,
+  },
+  {
+    id: 'content-forge-ai',
+    name: 'ContentForge AI',
+    description: 'Forge high-ranking, human-like articles and content briefs with our most advanced AI writer.',
+    liveUrls: [{ name: 'Launch App', url: 'https://content-forge.affiliatemarketingforsuccess.com' }],
+    icon: <SparklesIcon />,
+  },
+  {
+    id: 'content-optimizer-pro',
+    name: 'WordPress Content Optimizer Pro',
+    description: 'Directly optimize your WordPress content for higher rankings with deep semantic analysis.',
+    liveUrls: [
+      { name: 'Content Optimizer', url: 'https://content-optimizer.affiliatemarketingforsuccess.com' },
+      { name: 'Optimizer Pro', url: 'https://content-optimizer-pro.affiliatemarketingforsuccess.com' }
+    ],
+    icon: <WrenchScrewdriverIcon />,
+  },
+  {
+    id: 'photo-ai-enhancer',
+    name: 'Photo AI Enhancer',
+    description: 'Upscale, de-noise, and enhance your images to professional quality, boosting visual appeal and page speed.',
+    liveUrls: [{ name: 'Launch App', url: 'https://photo-enhancer.affiliatemarketingforsuccess.com' }],
+    icon: <PhotoIcon />,
+  },
+  {
+    id: 'ai-slug-optimizer',
+    name: 'AI Slug Optimizer',
+    description: 'Generate perfectly optimized, keyword-rich URL slugs that search engines and users love.',
+    liveUrls: [{ name: 'Launch App', url: 'https://slug-optimizer.affiliatemarketingforsuccess.com' }],
+    icon: <LinkIcon />,
+  },
+  {
+    id: 'ai-copilot',
+    name: 'AI Co-pilot',
+    description: 'Go beyond generic AI. Our co-pilot integrates with your workflow, offering context-aware suggestions.',
+    liveUrls: [{ name: 'Launch App', url: 'https://viral-post.affiliatemarketingforsuccess.com' }],
+    icon: <CpuChipIcon />,
+  },
+];
+
+
+export const FEATURES: Feature[] = [
+    {
+        id: 'feature-1',
+        name: 'Unified SEO Ecosystem',
+        description: 'Unlike fragmented tools, our suite provides a cohesive workflow from keyword research to final publication, ensuring consistency and maximizing impact.',
+        icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-cyan-400"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>,
+    },
+    {
+        id: 'feature-2',
+        name: 'Topical Authority Engine',
+        description: "Our exclusive AI model doesn't just stuff keywords; it builds true topical authority by understanding semantic relationships and user intent.",
+        icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-cyan-400"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 100 15 7.5 7.5 0 000-15zM21 21l-5.197-5.197" /></svg>,
+    },
+    {
+        id: 'feature-3',
+        name: 'Real-Time SERP Analysis',
+        description: 'Stay ahead of the competition with live SERP data integrated directly into our content tools, providing actionable insights instantly.',
+        icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-cyan-400"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-3.75-2.25m3.75 2.25l-1.994 2.184M18 18v-3.75m-7.5-10.5H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.25" /></svg>,
+    }
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id: 'testimonial-1',
+    quote: "I've tried every SEO tool under the sun. This suite is the first one that feels like a true partner. The SEO Orchestrator, in particular, gave me a clarity I never had. We chose them because their focus on topical authority is industry-leading.",
+    name: 'Sarah L.',
+    title: 'Founder, Growth Hackers Weekly',
+    avatarUrl: 'https://i.pravatar.cc/100?u=sarah',
+  },
+  {
+    id: 'testimonial-2',
+    quote: "ContentForge AI is miles ahead of generic AI writers. The output requires minimal editing and genuinely understands search intent. It's the only AI tool that has actually reduced my content production time while increasing rankings.",
+    name: 'Mike R.',
+    title: 'Head of Content, TechSavvy',
+    avatarUrl: 'https://i.pravatar.cc/100?u=mike',
+  },
+    {
+    id: 'testimonial-3',
+    quote: "The integration between the tools is seamless. I can optimize a slug, enhance an image, and perfect the content all in one place. It replaced three separate subscriptions for us. The ROI was immediate.",
+    name: 'Elena G.',
+    title: 'Digital Marketing Director',
+    avatarUrl: 'https://i.pravatar.cc/100?u=elena',
+  },
+];

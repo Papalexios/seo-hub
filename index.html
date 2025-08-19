@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus AI - Your Competitive Edge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+      
+      @keyframes text-shimmer {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+      }
+      .animate-text {
+        background-size: 200% auto;
+        animation: text-shimmer 5s linear infinite;
+      }
+
+      /* Animated Starfield Background */
+      @keyframes move-stars {
+        from { transform: translateY(0px); }
+        to { transform: translateY(-2000px); }
+      }
+      .stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: 
+          -365px 1634px #FFF, 59px 1993px #FFF, -454px 1139px #FFF, 429px 1195px #FFF, -137px 448px #FFF, -100px 147px #FFF, -18px 46px #FFF, 626px 363px #FFF, 765px 448px #FFF, 638px 1276px #FFF, -325px 783px #FFF, -164px 8px #FFF, -23px 1433px #FFF, 800px 1869px #FFF, -255px 1974px #FFF, 792px 1496px #FFF, -239px 70px #FFF, -108px 23px #FFF, -86px 867px #FFF, 83px 1801px #FFF, 69px 1150px #FFF, 545px 126px #FFF, 449px 101px #FFF, -446px 635px #FFF, -407px 1177px #FFF, 32px 1482px #FFF, 342px 1056px #FFF, -165px 1109px #FFF, 249px 1399px #FFF, 219px 1171px #FFF, 412px 1177px #FFF, -450px 1586px #FFF, 410px 1935px #FFF, 69px 1693px #FFF, 56px 106px #FFF, -359px 112px #FFF, -450px 144px #FFF, 701px 1941px #FFF, 290px 886px #FFF, 222px 174px #FFF, -449px 1228px #FFF, 48px 843px #FFF, 64px 1789px #FFF, 439px 1041px #FFF, -230px 133px #FFF, 12px 1876px #FFF, -438px 851px #FFF;
+        animation: move-stars 200s linear infinite;
+      }
+      .stars-2 { 
+        box-shadow: 388px 1830px #FFF, -161px 1618px #FFF, 252px 1678px #FFF, 184px 922px #FFF, -379px 65px #FFF, 137px 1586px #FFF, -247px 1678px #FFF, 226px 1007px #FFF, -226px 809px #FFF, 171px 1629px #FFF, -21px 1409px #FFF, 153px 405px #FFF, 412px 1642px #FFF, 453px 805px #FFF, 355px 1258px #FFF, -18px 1403px #FFF, 294px 1205px #FFF, 16px 1326px #FFF, -435px 1146px #FFF, -391px 1599px #FFF, 212px 1083px #FFF, -114px 1021px #FFF, -358px 1779px #FFF, -170px 1974px #FFF, -417px 1059px #FFF, -429px 1109px #FFF, 401px 1111px #FFF, 413px 174px #FFF, -122px 1095px #FFF, 179px 1624px #FFF, -406px 389px #FFF, 396px 878px #FFF, -383px 1358px #FFF, -210px 128px #FFF, 237px 153px #FFF, -320px 229px #FFF, 11px 470px #FFF, 411px 1869px #FFF, 35px 1904px #FFF, 127px 1512px #FFF, 41px 180px #FFF, 363px 1211px #FFF, -424px 1356px #FFF, -204px 1509px #FFF, 432px 188px #FFF, -184px 129px #FFF, 291px 1335px #FFF, -14px 1682px #FFF;
+        animation-delay: -100s; 
+      }
+      .stars-3 { 
+        box-shadow: 419px 1969px #FFF, 187px 1416px #FFF, 231px 1391px #FFF, 410px 1004px #FFF, 220px 802px #FFF, 319px 1342px #FFF, -199px 1490px #FFF, -25px 1284px #FFF, -332px 1690px #FFF, -18px 1344px #FFF, 421px 1202px #FFF, 417px 1030px #FFF, -325px 1032px #FFF, -29px 1909px #FFF, -186px 135px #FFF, -393px 1279px #FFF, -199px 1632px #FFF, 18px 1658px #FFF, 415px 185px #FFF, -320px 1438px #FFF, 316px 1836px #FFF, 230px 1802px #FFF, -15px 1391px #FFF, 281px 1889px #FFF, 278px 1885px #FFF, 20px 1944px #FFF, -156px 1830px #FFF, 27px 1192px #FFF, -382px 1493px #FFF, 44px 1934px #FFF, 246px 1649px #FFF, 375px 1319px #FFF, 18px 1928px #FFF, 413px 131px #FFF, -316px 1438px #FFF, 15px 1283px #FFF, 5px 192px #FFF, -327px 1682px #FFF, 269px 1221px #FFF, 169px 1813px #FFF, 240px 1386px #FFF, -305px 1589px #FFF, -393px 1192px #FFF, 42px 1644px #FFF, -307px 143px #FFF, 314px 1298px #FFF, 44px 119px #FFF, 168px 181px #FFF;
+        animation-delay: -150s; 
+      }
+      
+      /* Glowing Core Animation */
+      @keyframes pulse-glow {
+        0%, 100% { transform: scale(1); opacity: 0.4; }
+        50% { transform: scale(1.2); opacity: 0.6; }
+      }
+      @keyframes rotate-rays {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .glowing-core {
+        width: 100%; height: 100%;
+        background: radial-gradient(circle, rgba(167, 139, 250, 0.5) 0%, rgba(167, 139, 250, 0) 65%);
+        border-radius: 50%;
+        animation: pulse-glow 8s ease-in-out infinite;
+      }
+      .light-rays {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: 
+          conic-gradient(from 0deg, transparent 0deg 30deg, rgba(147, 197, 253, 0.1) 32deg 35deg, transparent 37deg 360deg),
+          conic-gradient(from 180deg, transparent 0deg 30deg, rgba(147, 197, 253, 0.1) 32deg 35deg, transparent 37deg 360deg);
+        border-radius: 50%;
+        animation: rotate-rays 60s linear infinite;
+        opacity: 0.5;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
