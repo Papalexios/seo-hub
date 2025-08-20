@@ -11,9 +11,9 @@ const Testimonials: React.FC = () => {
     <section className="py-24 sm:py-32">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Trusted by Industry Leaders</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Why Professionals Are Making the Switch</h2>
             <p className="mt-4 text-lg text-slate-400">
-                See why professionals choose us over the competition.
+                Hear from marketers who've gained a definitive edge with Nexus AI.
             </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">

@@ -8,7 +8,11 @@ const Footer: React.FC = () => {
         <div className="py-8 text-center text-sm text-slate-500">
           <p>&copy; {new Date().getFullYear()} Nexus AI. All rights reserved.</p>
           <p className="mt-1">
-            Built to give you a competitive edge in the digital landscape.
+            A free app by Alexios Papaioannou at{' '}
+            <a href="https://affiliatemarketingforsuccess.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-300 transition-colors">
+              affiliatemarketingforsuccess.com
+            </a>
+            .
           </p>
         </div>
       </div>

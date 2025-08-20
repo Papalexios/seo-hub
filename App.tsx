@@ -5,6 +5,7 @@ import ProjectsGrid from './components/ProjectsGrid';
 import Features from './components/Features';
 import Testimonials from './components/Testimonials';
 import RiskReversal from './components/RiskReversal';
+import Resources from './components/Resources';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -37,6 +38,7 @@ const App: React.FC = () => {
           <Features />
           <Testimonials />
           <RiskReversal />
+          <Resources />
         </main>
         <Footer />
 

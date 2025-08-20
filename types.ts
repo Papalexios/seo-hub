@@ -27,3 +27,11 @@ export interface Testimonial {
   title: string;
   avatarUrl: string;
 }
+
+export interface Resource {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  icon: React.ReactNode;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Project, Feature, Testimonial } from './types';
+import type { Project, Feature, Testimonial, Resource } from './types';
 
 const DocumentChartBarIcon = (props: React.ComponentProps<'svg'>) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
@@ -111,23 +111,66 @@ export const FEATURES: Feature[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 'testimonial-1',
-    quote: "I've tried every SEO tool under the sun. This suite is the first one that feels like a true partner. The SEO Orchestrator, in particular, gave me a clarity I never had. We chose them because their focus on topical authority is industry-leading.",
+    quote: "Nexus AI is the first suite that feels like a strategic partner, not just a tool. The SEO Orchestrator's focus on topical authority is unparalleled—it provided a level of strategic clarity we couldn't find anywhere else.",
     name: 'Sarah L.',
     title: 'Founder, Growth Hackers Weekly',
     avatarUrl: 'https://i.pravatar.cc/100?u=sarah',
   },
   {
     id: 'testimonial-2',
-    quote: "ContentForge AI is miles ahead of generic AI writers. The output requires minimal editing and genuinely understands search intent. It's the only AI tool that has actually reduced my content production time while increasing rankings.",
+    quote: "ContentForge AI allowed us to move beyond static text. Embedding interactive tools directly into our articles skyrocketed our user engagement and time-on-page. It’s a game-changer for creating content that not only ranks but also captivates.",
     name: 'Mike R.',
     title: 'Head of Content, TechSavvy',
     avatarUrl: 'https://i.pravatar.cc/100?u=mike',
   },
-    {
+  {
     id: 'testimonial-3',
-    quote: "The integration between the tools is seamless. I can optimize a slug, enhance an image, and perfect the content all in one place. It replaced three separate subscriptions for us. The ROI was immediate.",
+    quote: "The seamless integration is what sets Nexus AI apart. We replaced three separate subscriptions with this one cohesive ecosystem. The ROI wasn't just fast—it was immediate and substantial.",
     name: 'Elena G.',
     title: 'Digital Marketing Director',
     avatarUrl: 'https://i.pravatar.cc/100?u=elena',
   },
+];
+
+const BookOpenIcon = (props: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+    </svg>
+);
+
+const ChartPieIcon = (props: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+    </svg>
+);
+
+const LightBulbIcon = (props: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
+    </svg>
+);
+
+export const RESOURCES: Resource[] = [
+    {
+        id: 'resource-1',
+        title: 'Develop a Winning Content Strategy',
+        description: 'Learn the foundational principles of creating content that not only ranks but also builds lasting authority in your niche.',
+        url: 'https://affiliatemarketingforsuccess.com/blogging/winning-content-strategy/',
+        icon: <BookOpenIcon />,
+    },
+    {
+        id: 'resource-2',
+        title: 'Build a High-Impact SEO Strategy',
+        description: 'Go beyond keywords. Discover how to construct a comprehensive SEO framework that delivers sustainable, long-term results.',
+        url: 'https://affiliatemarketingforsuccess.com/seo/build-an-effective-seo-strategy/',
+        icon: <ChartPieIcon />,
+    },
+    {
+        id: 'resource-3',
+        title: 'Why AI is the Future of SEO',
+        description: 'Understand the paradigm shift. See how leveraging AI tools is no longer an option, but a necessity for competitive SEO.',
+        url: 'https://affiliatemarketingforsuccess.com/ai/ai-future-of-seo/',
+        icon: <LightBulbIcon />,
+    },
 ];

@@ -8,9 +8,9 @@ const CheckIcon = () => (
 
 const RiskReversal: React.FC = () => {
   const advantages = [
-    { title: "30-Day Money-Back Guarantee", description: "Longer than the industry standard 14 days. If you don't see results, get a full refund. No questions asked." },
-    { title: "Priority Onboarding Support", description: "Unlike others, we offer dedicated 1-on-1 onboarding to ensure you're set up for success from day one." },
-    { title: "Locked-In Pricing", description: "Your subscription price is guaranteed never to increase, providing predictable costs competitors can't match." }
+    { title: "Completely Free, Forever", description: "No trials, no hidden fees, no credit card required. Gain full access to our powerful AI arsenal, provided by Alexios Papaioannou." },
+    { title: "Instant Competitive Edge", description: "While your competitors pay for fragmented tools, you can deploy a fully integrated SEO ecosystem to dominate your niche—starting today." },
+    { title: "Backed by Proven Expertise", description: "This suite is a product of insights from affiliatemarketingforsuccess.com, giving you tools built on proven, real-world strategies." }
   ];
 
   return (
@@ -24,14 +24,14 @@ const RiskReversal: React.FC = () => {
           }}
         ></div>
         <div className="relative z-10 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Your Success is Our Guarantee</h2>
-          <p className="mt-4 text-lg text-slate-400">We remove the risk so you can focus on growth.</p>
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Absolutely Zero Risk, All the Reward</h2>
+          <p className="mt-4 text-lg text-slate-400">This entire suite is provided free of charge to empower your digital strategy.</p>
         </div>
         <ul role="list" className="relative z-10 mt-10 space-y-6 text-sm leading-6 text-slate-300">
           {advantages.map((adv, index) => (
             <li key={index} className="flex gap-x-3">
               <CheckIcon />
-              <span>
+              <span className="text-left">
                 <strong className="font-semibold text-white">{adv.title}:</strong> {adv.description}
               </span>
             </li>
