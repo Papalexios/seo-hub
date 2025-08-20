@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'content-forge-ai',
     name: 'ContentForge AI',
-    description: 'Forge high-ranking, human-like articles and content briefs with our most advanced AI writer.',
+    description: 'Instantly embed AI-generated interactive tools to captivate readers and dominate search rankings. Go from static text to an interactive experience in minutes, not days.',
     liveUrls: [{ name: 'Launch App', url: 'https://content-forge.affiliatemarketingforsuccess.com' }],
     icon: <SparklesIcon />,
   },
@@ -80,7 +80,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'ai-copilot',
     name: 'AI Co-pilot',
-    description: 'Go beyond generic AI. Our co-pilot integrates with your workflow, offering context-aware suggestions.',
+    description: 'Architect high-impact, credible social media campaigns that actually convert.',
     liveUrls: [{ name: 'Launch App', url: 'https://viral-post.affiliatemarketingforsuccess.com' }],
     icon: <CpuChipIcon />,
   },

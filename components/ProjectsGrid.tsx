@@ -8,7 +8,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       <div className="absolute -inset-px bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-lg opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
       <div className="relative flex flex-col items-center text-center p-8 h-full bg-slate-900/60 backdrop-blur-md rounded-2xl border border-white/10">
         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-cyan-900 to-purple-900 text-cyan-300 group-hover:text-white transition-colors duration-300">
-          {React.cloneElement(project.icon, { className: "w-8 h-8" })}
+          {project.icon}
         </div>
         <h3 className="mt-6 text-lg font-semibold text-white">{project.name}</h3>
         <p className="mt-2 text-sm text-slate-400 flex-grow">{project.description}</p>
