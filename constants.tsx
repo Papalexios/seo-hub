@@ -37,6 +37,11 @@ const PhotoIcon = (props: React.ComponentProps<'svg'>) => (
     </svg>
 );
 
+const QuestionMarkCircleIcon = (props: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+    </svg>
+);
 
 export const PROJECTS: Project[] = [
   {
@@ -45,13 +50,6 @@ export const PROJECTS: Project[] = [
     description: 'The master tool to coordinate your entire SEO strategy, from keywords to content, ensuring topical authority.',
     liveUrls: [{ name: 'Launch App', url: 'https://seo-orchestrator.affiliatemarketingforsuccess.com' }],
     icon: <DocumentChartBarIcon />,
-  },
-  {
-    id: 'content-forge-ai',
-    name: 'ContentForge AI',
-    description: 'Instantly embed AI-generated interactive tools to captivate readers and dominate search rankings. Go from static text to an interactive experience in minutes, not days.',
-    liveUrls: [{ name: 'Launch App', url: 'https://content-forge.affiliatemarketingforsuccess.com' }],
-    icon: <SparklesIcon />,
   },
   {
     id: 'content-optimizer-pro',
@@ -64,11 +62,18 @@ export const PROJECTS: Project[] = [
     icon: <WrenchScrewdriverIcon />,
   },
   {
-    id: 'photo-ai-enhancer',
-    name: 'Photo AI Enhancer',
-    description: 'Upscale, de-noise, and enhance your images to professional quality, boosting visual appeal and page speed.',
-    liveUrls: [{ name: 'Launch App', url: 'https://photo-enhancer.affiliatemarketingforsuccess.com' }],
-    icon: <PhotoIcon />,
+    id: 'html-snippet-ai',
+    name: 'HTML Snippet AI',
+    description: 'Beyond Static Text: Instantly generate bespoke HTML tools from your content. Captivate readers with interactive experiences, boost engagement, and earn the rankings you deserve.',
+    liveUrls: [{ name: 'Launch App', url: 'https://html-snippet.affiliatemarketingforsuccess.com' }],
+    icon: <SparklesIcon />,
+  },
+  {
+    id: 'quiz-forge-ai',
+    name: 'QuizForge AI',
+    description: 'PhD-Level Quizzes from Any Post. Transform articles into authoritative, interactive quizzes. Our AI curriculum designer crafts fact-checked questions with rich explanations to captivate your audience, boost on-page time, and build reader loyalty.',
+    liveUrls: [{ name: 'Launch App', url: 'https://quiz-forge.affiliatemarketingforsuccess.com/' }],
+    icon: <QuestionMarkCircleIcon />,
   },
   {
     id: 'ai-slug-optimizer',
@@ -79,10 +84,17 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'ai-copilot',
-    name: 'AI Co-pilot',
+    name: 'AI Social Media Co-Pilot',
     description: 'Architect high-impact, credible social media campaigns that actually convert.',
     liveUrls: [{ name: 'Launch App', url: 'https://viral-post.affiliatemarketingforsuccess.com' }],
     icon: <CpuChipIcon />,
+  },
+    {
+    id: 'photo-ai-enhancer',
+    name: 'Photo AI Enhancer',
+    description: 'Upscale, de-noise, and enhance your images to professional quality, boosting visual appeal and page speed.',
+    liveUrls: [{ name: 'Launch App', url: 'https://photo-enhancer.affiliatemarketingforsuccess.com' }],
+    icon: <PhotoIcon />,
   },
 ];
 
