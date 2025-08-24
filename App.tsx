@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProjectsGrid from './components/ProjectsGrid';
@@ -7,55 +7,83 @@ import Testimonials from './components/Testimonials';
 import RiskReversal from './components/RiskReversal';
 import Resources from './components/Resources';
 import Footer from './components/Footer';
+import { ThemeContext, Theme } from './types';
 
 const App: React.FC = () => {
+  const [theme, setTheme] = useState<Theme>('dark');
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as Theme | null;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else if (prefersDark) {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+    
+    const handleMouseMove = (event: MouseEvent) => {
+      document.documentElement.style.setProperty('--cursor-x', `${event.clientX}px`);
+      document.documentElement.style.setProperty('--cursor-y', `${event.clientY}px`);
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+
+  }, []);
+
+  useEffect(() => {
+    const html = document.documentElement;
+    html.classList.remove('dark', 'light'); // Clear all theme classes
+    html.classList.add(theme); // Add the current theme class
+    
+    if (theme === 'black') {
+        html.classList.add('dark'); // Black theme inherits dark styles
+    }
+    
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prevTheme => {
+      if (prevTheme === 'light') return 'dark';
+      if (prevTheme === 'dark') return 'black';
+      return 'light';
+    });
+  };
+
+  const themeValue = useMemo(() => ({ theme, toggleTheme }), [theme]);
+
   return (
-    <div className="bg-slate-950 text-slate-200 antialiased selection:bg-purple-500/50 selection:text-white">
-      <div className="relative isolate min-h-screen overflow-x-hidden">
-        
-        <div className="fixed top-0 left-0 w-full h-full overflow-hidden -z-20">
-          <div className="stars"></div>
-          <div className="stars stars-2"></div>
-          <div className="stars stars-3"></div>
-        </div>
+    <ThemeContext.Provider value={themeValue}>
+      <div className="bg-[#f8f9fa] text-slate-800 dark:bg-[#020617] black:bg-black dark:text-slate-200 antialiased selection:bg-purple-500/70 selection:text-white transition-colors duration-500">
+        <div className="relative isolate min-h-screen overflow-x-hidden">
+          
+          <div className="aurora-background">
+            <div className="aurora aurora-1"></div>
+            <div className="aurora aurora-2"></div>
+            <div className="aurora aurora-3"></div>
+          </div>
 
-        <div 
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" 
-          aria-hidden="true"
-        >
-          <div 
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-purple-600 to-cyan-500 opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" 
-            style={{
-              clipPath: 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'
-            }} 
-          />
-        </div>
-        
-        <Header />
-        <main className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Hero />
-          <ProjectsGrid />
-          <Features />
-          <Testimonials />
-          <RiskReversal />
-          <Resources />
-        </main>
-        <Footer />
+          <Header />
+          <main className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <Hero />
+            <ProjectsGrid />
+            <Features />
+            <Testimonials />
+            <RiskReversal />
+            <Resources />
+          </main>
+          <Footer />
 
-         <div
-          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-          aria-hidden="true"
-        >
-          <div
-            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#80ff8c] to-[#00c6ff] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-            style={{
-              clipPath: 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-            }}
-          />
         </div>
-
       </div>
-    </div>
+    </ThemeContext.Provider>
   );
 };
 
