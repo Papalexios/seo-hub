@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nexus AI - Your Competitive Edge</title>
+    <title>Nexus AI - Your Unfair Advantage</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
@@ -23,93 +23,132 @@
         animation: animated-gradient 12s ease-in-out infinite;
       }
 
-      /* Animated Aurora Background */
+      /* CSS Variable-based Theming System */
       :root {
-        --bg-light: #f8f9fa;
-        --bg-dark: #020617;
-        --bg-black: #000000;
+        --bg-main: #f8f9fa;
+        --text-main: #1e293b; /* slate-800 */
+        --text-muted: #475569; /* slate-600 */
+        --text-heading: #0f172a; /* slate-900 */
+        --text-link: #0891b2; /* cyan-700 */
+        --text-link-hover: #06b6d4; /* cyan-600 */
+
+        --bg-card: rgba(255, 255, 255, 0.6);
+        --bg-card-blur: 8px;
+        --border-card: rgba(15, 23, 42, 0.1);
+
+        --bg-header: rgba(255, 255, 255, 0.6);
+        --border-header: rgba(15, 23, 42, 0.1);
+
+        --bg-button-theme: #f1f5f9; /* slate-100 */
+        --bg-button-theme-hover: #e2e8f0; /* slate-200 */
+        --text-button-theme: #475569; /* slate-600 */
+
+        --bg-button-secondary: #f1f5f9; /* slate-100 */
+        --border-button-secondary: #cbd5e1; /* slate-300 */
+        --bg-button-secondary-hover: #e2e8f0; /* slate-200 */
+        
+        --bg-icon-wrapper: linear-gradient(to bottom right, #e0f2fe, #f3e8ff);
+        --text-icon: #0e7490; /* cyan-700 */
+
+        --quote-icon-color: #e2e8f0; /* slate-200 */
+        --risk-reversal-glow: rgba(34, 211, 238, 0.1);
+
+        --constellation-point: rgba(100, 116, 139, 0.6);
+        --constellation-line: rgba(100, 116, 139, 0.2);
+        
         --cursor-x: 50vw;
         --cursor-y: 50vh;
       }
+
+      html.dark {
+        --bg-main: #020617;
+        --text-main: #cbd5e1; /* slate-300 */
+        --text-muted: #94a3b8; /* slate-400 */
+        --text-heading: #ffffff;
+        --text-link: #67e8f9; /* cyan-300 */
+        --text-link-hover: #a5f3fc; /* cyan-200 */
+
+        --bg-card: rgba(15, 23, 42, 0.7);
+        --bg-card-blur: 16px;
+        --border-card: rgba(255, 255, 255, 0.1);
+
+        --bg-header: rgba(2, 6, 23, 0.6);
+        --border-header: rgba(255, 255, 255, 0.1);
+
+        --bg-button-theme: rgba(30, 41, 59, 0.8); /* slate-800 */
+        --bg-button-theme-hover: #334155; /* slate-700 */
+        --text-button-theme: #94a3b8; /* slate-400 */
+
+        --bg-button-secondary: rgba(30, 41, 59, 0.7);
+        --border-button-secondary: #475569; /* slate-700 */
+        --bg-button-secondary-hover: rgba(51, 65, 85, 0.8);
+        
+        --bg-icon-wrapper: linear-gradient(to bottom right, rgba(16, 185, 212, 0.2), rgba(168, 85, 247, 0.2));
+        --text-icon: #67e8f9; /* cyan-300 */
+        
+        --quote-icon-color: #334155; /* slate-700 */
+        --risk-reversal-glow: rgba(168, 85, 247, 0.2);
+        
+        --constellation-point: rgba(168, 85, 247, 0.3);
+        --constellation-line: rgba(168, 85, 247, 0.1);
+      }
+
+      html.black {
+        --bg-main: #000000;
+        --text-main: #cbd5e1;
+        --text-muted: #94a3b8;
+        --text-heading: #ffffff;
+        --text-link: #67e8f9;
+        --text-link-hover: #a5f3fc;
+
+        --bg-card: rgba(5, 5, 5, 0.7);
+        --bg-card-blur: 16px;
+        --border-card: rgba(255, 255, 255, 0.15);
+
+        --bg-header: rgba(0, 0, 0, 0.6);
+        --border-header: rgba(255, 255, 255, 0.15);
+
+        --bg-button-theme: rgba(26, 26, 26, 0.8);
+        --bg-button-theme-hover: #1e293b; /* slate-800 */
+        --text-button-theme: #94a3b8;
+
+        --bg-button-secondary: rgba(15, 23, 42, 0.7);
+        --border-button-secondary: #334155;
+        --bg-button-secondary-hover: rgba(30, 41, 59, 0.8);
+        
+        --bg-icon-wrapper: linear-gradient(to bottom right, rgba(16, 185, 212, 0.25), rgba(168, 85, 247, 0.25));
+        --text-icon: #a5f3fc;
+        
+        --quote-icon-color: #1e293b; /* slate-800 */
+        --risk-reversal-glow: rgba(168, 85, 247, 0.3);
+        
+        --constellation-point: rgba(168, 85, 247, 0.4);
+        --constellation-line: rgba(168, 85, 247, 0.15);
+      }
+
       body {
-        background-color: var(--bg-light);
+        background-color: var(--bg-main);
+        color: var(--text-main);
         transition: background-color 0.5s ease;
-        background-image: radial-gradient(circle at top right, rgba(168, 85, 247, 0.03), transparent 40%),
-                          radial-gradient(circle at bottom left, rgba(34, 211, 238, 0.03), transparent 40%);
       }
-      html.dark body {
-        background-color: var(--bg-dark);
-        background-image: none;
-      }
-      html.black body {
-        background-color: var(--bg-black);
-        background-image: none;
+      .backdrop-blur-variable {
+        backdrop-filter: blur(var(--bg-card-blur));
+        -webkit-backdrop-filter: blur(var(--bg-card-blur));
       }
 
-      .aurora-background {
+      #constellation-canvas {
         position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         z-index: -20;
-        opacity: 0;
-        transition: opacity 0.8s ease-in-out;
-        overflow: hidden;
-      }
-      html.dark .aurora-background, html.black .aurora-background {
-        opacity: 1;
       }
 
-      @keyframes aurora {
-        0% { transform: translate(-50%, -50%) rotate(0deg) scale(1.5); }
-        25% { transform: translate(-50%, -50%) rotate(45deg) scale(1.7); }
-        50% { transform: translate(-50%, -50%) rotate(0deg) scale(2.2); }
-        75% { transform: translate(-50%, -50%) rotate(-45deg) scale(1.7); }
-        100% { transform: translate(-50%, -50%) rotate(0deg) scale(1.5); }
-      }
-      .aurora {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 140vw;
-        height: 140vw;
-        max-width: 1600px;
-        max-height: 1600px;
-        border-radius: 9999px;
-        mix-blend-mode: screen;
-        animation: aurora 40s linear infinite;
-        will-change: transform;
-        filter: blur(80px);
-      }
-      .aurora-1 {
-        background: radial-gradient(rgba(168, 85, 247, 0.18), transparent 70%);
-        animation-delay: 0s;
-      }
-      .aurora-2 {
-        background: radial-gradient(rgba(34, 211, 238, 0.18), transparent 70%);
-        animation-duration: 45s;
-        animation-delay: -7s;
-      }
-      .aurora-3 {
-        background: radial-gradient(rgba(59, 130, 246, 0.15), transparent 70%);
-        animation-duration: 50s;
-        animation-delay: -15s;
-      }
-      html.black .aurora-1 { background: radial-gradient(rgba(168, 85, 247, 0.22), transparent 70%); }
-      html.black .aurora-2 { background: radial-gradient(rgba(34, 211, 238, 0.22), transparent 70%); }
-      html.black .aurora-3 { background: radial-gradient(rgba(59, 130, 246, 0.18), transparent 70%); }
-      
-      /* Section Scroll Animation */
       @keyframes fade-in-up {
-        from {
-          opacity: 0;
-          transform: translateY(40px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(40px); }
+        to { opacity: 1; transform: translateY(0); }
       }
-
-      /* A modern, progressive enhancement for scroll animations. */
       .section-animate {
         opacity: 0;
         animation: fade-in-up 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
@@ -118,15 +157,12 @@
         animation-range-end: cover 35%;
       }
       
-      /* Interactive Cursor Light */
       #cursor-gradient {
         position: fixed;
         z-index: -10;
         pointer-events: none;
-        top: 0;
-        left: 0;
-        width: 800px;
-        height: 800px;
+        top: 0; left: 0;
+        width: 800px; height: 800px;
         border-radius: 9999px;
         background: radial-gradient(circle at center, rgba(168, 85, 247, 0.12), transparent 50%);
         filter: blur(120px);
@@ -134,49 +170,38 @@
         transition: transform 0.2s ease-out, opacity 0.5s ease;
         opacity: 0;
       }
-      html.dark #cursor-gradient, html.black #cursor-gradient {
-        opacity: 1;
-      }
-      html.black #cursor-gradient {
-         background: radial-gradient(circle at center, rgba(168, 85, 247, 0.18), transparent 50%);
-      }
+      html.dark #cursor-gradient, html.black #cursor-gradient { opacity: 1; }
+      html.black #cursor-gradient { background: radial-gradient(circle at center, rgba(168, 85, 247, 0.18), transparent 50%); }
 
-      /* Animated Gradient Border for Cards */
-      @property --angle {
-        syntax: '<angle>';
-        initial-value: 0deg;
-        inherits: false;
-      }
-      @keyframes border-spin {
-        to {
-          --angle: 360deg;
-        }
-      }
+      @property --angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+      @keyframes border-spin { to { --angle: 360deg; } }
       .animated-border-card::before {
         content: '';
         position: absolute;
         inset: -1px;
-        border-radius: 1.1rem; /* Slightly larger than the card's border-radius */
+        border-radius: 1.1rem; /* Slightly larger */
         background: conic-gradient(from var(--angle), #22d3ee, #a855f7, #ec4899, #a855f7, #22d3ee);
         z-index: -1;
         animation: border-spin 4s linear infinite;
         opacity: 0;
         transition: opacity 0.4s ease-in-out;
       }
-      .animated-border-card:hover::before {
-        opacity: 1;
-      }
+      .animated-border-card:hover::before { opacity: 1; }
       
-      /* Breathing CTA button */
-      @keyframes pulse-slow {
-        50% {
-          box-shadow: 0 0 0 10px rgba(168, 85, 247, 0), 0 0 0 20px rgba(168, 85, 247, 0);
-        }
-      }
+      @keyframes pulse-slow { 50% { box-shadow: 0 0 0 10px rgba(168, 85, 247, 0), 0 0 0 20px rgba(168, 85, 247, 0); } }
       .animate-pulse-slow {
         box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.5), 0 0 0 0 rgba(168, 85, 247, 0.5);
         animation: pulse-slow 3s infinite cubic-bezier(0.66, 0, 0, 1);
       }
+
+      .icon-base { transition: all 0.3s ease-in-out; }
+      .group:hover .icon-base { transform: scale(1.1); }
+      .group:hover .icon-animated-1 { transform: translateY(-4px) rotate(5deg); }
+      .group:hover .icon-animated-2 { transform: rotate(15deg); }
+      .group:hover .icon-animated-3-1 { animation: sparkle-1 1s ease-in-out infinite; }
+      .group:hover .icon-animated-3-2 { animation: sparkle-2 1s ease-in-out infinite 0.3s; }
+      @keyframes sparkle-1 { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.5; } }
+      @keyframes sparkle-2 { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.7; } }
     </style>
   <script type="importmap">
 {
@@ -190,6 +215,7 @@
 </head>
   <body>
     <div id="cursor-gradient"></div>
+    <canvas id="constellation-canvas"></canvas>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

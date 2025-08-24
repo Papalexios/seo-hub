@@ -1,47 +1,51 @@
 import React from 'react';
 import type { Project, Feature, Testimonial, Resource } from './types';
 
-const DocumentChartBarIcon = (props: React.ComponentProps<'svg'>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+export const AnimatedDocumentChartBarIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 icon-base ${className || ''}`} {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75Z" className="transition-transform duration-300 group-hover:-translate-y-1" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625Z" className="transition-transform duration-300 delay-75 group-hover:translate-y-1" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" className="transition-transform duration-300 delay-150 group-hover:-translate-y-1.5" />
     </svg>
 );
-
-const SparklesIcon = (props: React.ComponentProps<'svg'>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
+export const AnimatedSparklesIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 icon-base ${className || ''}`} {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" className="transition-all duration-300 icon-animated-3-1" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" className="transition-all duration-300 icon-animated-3-2" />
     </svg>
 );
-
-const LinkIcon = (props: React.ComponentProps<'svg'>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+export const AnimatedLinkIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 icon-base group-hover:rotate-12 ${className || ''}`} {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
     </svg>
 );
-
-const CpuChipIcon = (props: React.ComponentProps<'svg'>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 21v-1.5M15.75 3v1.5M19.5 8.25h1.5m-18 0h1.5M19.5 12h1.5m-18 0h1.5m15 3.75h1.5m-18 0h1.5M15.75 21v-1.5m-4.5-15v1.5m0 15v-1.5m-3.75-12H6m12 0h-1.5M9.75 12H6m9.75 0h-3.75m-3.75 3.75H6m9.75 0h-3.75M9 3.75H6.75A2.25 2.25 0 0 0 4.5 6v12a2.25 2.25 0 0 0 2.25 2.25h10.5A2.25 2.25 0 0 0 19.5 18V6A2.25 2.25 0 0 0 17.25 3.75H15M9 7.5h6v9H9v-9Z" />
+export const AnimatedCpuChipIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 icon-base ${className || ''}`} {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 21v-1.5M15.75 3v1.5M19.5 8.25h1.5m-18 0h1.5M19.5 12h1.5m-18 0h1.5m15 3.75h1.5m-18 0h1.5M15.75 21v-1.5m-4.5-15v1.5m0 15v-1.5m-3.75-12H6m12 0h-1.5M9.75 12H6m9.75 0h-3.75m-3.75 3.75H6m9.75 0h-3.75" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 3.75H6.75A2.25 2.25 0 0 0 4.5 6v12a2.25 2.25 0 0 0 2.25 2.25h10.5A2.25 2.25 0 0 0 19.5 18V6A2.25 2.25 0 0 0 17.25 3.75H15" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 7.5h6v9H9v-9Z" className="transition-all duration-300 group-hover:fill-cyan-400/20" />
     </svg>
 );
-
-const WrenchScrewdriverIcon = (props: React.ComponentProps<'svg'>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
+export const AnimatedWrenchScrewdriverIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 icon-base icon-animated-2 ${className || ''}`} {...props}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.495-2.495a1.125 1.125 0 0 1 1.591 0l3.75 3.75a1.125 1.125 0 0 1 0 1.591l-2.495 2.495m-6.236 2.495L5.841 21a2.25 2.25 0 0 1-3.182-3.182l2.495-2.495L11.42 15.17Zm-6.236-2.495L5.186 12.675 2.25 9.75l-1.125 1.125a2.25 2.25 0 0 0 0 3.182l2.495 2.495Z" />
     </svg>
 );
-
-const PhotoIcon = (props: React.ComponentProps<'svg'>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+export const AnimatedPhotoIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 icon-base ${className || ''}`} {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 8.25h.008v.008h-.008V8.25Z" className="transition-all duration-300 group-hover:fill-purple-400/30 group-hover:scale-150 origin-center" />
+    </svg>
+);
+export const AnimatedQuestionMarkCircleIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 icon-base icon-animated-1 ${className || ''}`} {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 15.75h.008v.008H12v-.008Z" />
     </svg>
 );
 
-const QuestionMarkCircleIcon = (props: React.ComponentProps<'svg'>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8" {...props}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
-    </svg>
-);
 
 export const PROJECTS: Project[] = [
   {
@@ -49,7 +53,7 @@ export const PROJECTS: Project[] = [
     name: 'SEO Orchestrator',
     description: 'The master tool to coordinate your entire SEO strategy, from keywords to content, ensuring topical authority.',
     liveUrls: [{ name: 'Launch App', url: 'https://seo-orchestrator.affiliatemarketingforsuccess.com' }],
-    icon: <DocumentChartBarIcon />,
+    icon: <AnimatedDocumentChartBarIcon />,
   },
   {
     id: 'content-optimizer-pro',
@@ -59,42 +63,42 @@ export const PROJECTS: Project[] = [
       { name: 'Content Optimizer', url: 'https://content-optimizer.affiliatemarketingforsuccess.com' },
       { name: 'Optimizer Pro', url: 'https://content-optimizer-pro.affiliatemarketingforsuccess.com' }
     ],
-    icon: <WrenchScrewdriverIcon />,
+    icon: <AnimatedWrenchScrewdriverIcon />,
   },
   {
     id: 'html-snippet-ai',
     name: 'HTML Snippet AI',
     description: 'Beyond Static Text: Instantly generate bespoke HTML tools from your content. Captivate readers with interactive experiences, boost engagement, and earn the rankings you deserve.',
     liveUrls: [{ name: 'Launch App', url: 'https://html-snippet.affiliatemarketingforsuccess.com' }],
-    icon: <SparklesIcon />,
+    icon: <AnimatedSparklesIcon />,
   },
   {
     id: 'quiz-forge-ai',
     name: 'QuizForge AI',
     description: 'PhD-Level Quizzes from Any Post. Transform articles into authoritative, interactive quizzes. Our AI curriculum designer crafts fact-checked questions with rich explanations to captivate your audience, boost on-page time, and build reader loyalty.',
     liveUrls: [{ name: 'Launch App', url: 'https://quiz-forge.affiliatemarketingforsuccess.com/' }],
-    icon: <QuestionMarkCircleIcon />,
+    icon: <AnimatedQuestionMarkCircleIcon />,
   },
   {
     id: 'ai-slug-optimizer',
     name: 'AI Slug Optimizer',
     description: 'Generate perfectly optimized, keyword-rich URL slugs that search engines and users love.',
     liveUrls: [{ name: 'Launch App', url: 'https://slug-optimizer.affiliatemarketingforsuccess.com' }],
-    icon: <LinkIcon />,
+    icon: <AnimatedLinkIcon />,
   },
   {
     id: 'ai-copilot',
     name: 'AI Social Media Co-Pilot',
     description: 'Architect high-impact, credible social media campaigns that actually convert.',
     liveUrls: [{ name: 'Launch App', url: 'https://viral-post.affiliatemarketingforsuccess.com' }],
-    icon: <CpuChipIcon />,
+    icon: <AnimatedCpuChipIcon />,
   },
     {
     id: 'photo-ai-enhancer',
     name: 'Photo AI Enhancer',
     description: 'Upscale, de-noise, and enhance your images to professional quality, boosting visual appeal and page speed.',
     liveUrls: [{ name: 'Launch App', url: 'https://photo-enhancer.affiliatemarketingforsuccess.com' }],
-    icon: <PhotoIcon />,
+    icon: <AnimatedPhotoIcon />,
   },
 ];
 
