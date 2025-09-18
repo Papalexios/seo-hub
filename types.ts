@@ -23,6 +23,7 @@ export interface Project {
   description: string;
   liveUrls?: LiveUrl[];
   icon: React.ReactElement;
+  isFeatured?: boolean;
 }
 
 export interface Feature {

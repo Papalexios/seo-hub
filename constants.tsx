@@ -45,6 +45,14 @@ export const AnimatedQuestionMarkCircleIcon = ({ className, ...props }: React.Co
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 15.75h.008v.008H12v-.008Z" />
     </svg>
 );
+export const AnimatedCubeTransparentIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 icon-base ${className || ''}`} {...props}>
+        <g className="transition-transform duration-500 ease-out group-hover:rotate-[-15deg] group-hover:scale-110">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 2.25L3 7.5v9l9 5.25 9-5.25v-9L12 2.25z" className="transition-all duration-500 opacity-20 group-hover:opacity-40" />
+        </g>
+    </svg>
+);
 
 
 export const PROJECTS: Project[] = [
@@ -64,6 +72,14 @@ export const PROJECTS: Project[] = [
       { name: 'Optimizer Pro', url: 'https://content-optimizer-pro.affiliatemarketingforsuccess.com' }
     ],
     icon: <AnimatedWrenchScrewdriverIcon />,
+  },
+  {
+    id: 'content-engine-ai',
+    name: 'Content Engine AI',
+    description: 'The ultimate command center for your content lifecycle. Plan, generate, and optimize SEO-driven articles at scale. Integrates with Gemini, OpenAI, and more, giving you the best AI for every task.',
+    liveUrls: [{ name: 'Launch Content Engine', url: 'https://content-engine.affiliatemarketingforsuccess.com' }],
+    icon: <AnimatedCubeTransparentIcon />,
+    isFeatured: true,
   },
   {
     id: 'html-snippet-ai',

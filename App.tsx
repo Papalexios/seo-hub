@@ -53,7 +53,9 @@ const Workflow: React.FC = () => {
 
     const getToolIcon = (id: string) => {
         const project = PROJECTS.find(p => p.id === id);
-        return project ? React.cloneElement(project.icon, { className: 'w-6 h-6' }) : null;
+        // FIX: Add a generic to React.cloneElement to specify the props type.
+        // This resolves a TypeScript error where `className` was not recognized on the generic icon element.
+        return project ? React.cloneElement<{ className: string }>(project.icon, { className: 'w-6 h-6' }) : null;
     };
 
     return (

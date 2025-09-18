@@ -3,8 +3,10 @@ import { PROJECTS } from '../constants';
 import type { Project } from '../types';
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+  const cardClasses = `group relative animated-border-card rounded-2xl transition-transform duration-300 ease-in-out hover:scale-105 ${project.isFeatured ? 'card-glow-permanent' : ''}`;
+
   return (
-    <div className="group relative animated-border-card rounded-2xl transition-transform duration-300 ease-in-out hover:scale-105" style={{ transformStyle: 'preserve-3d' }}>
+    <div className={cardClasses} style={{ transformStyle: 'preserve-3d' }}>
       <div className="relative flex flex-col items-center text-center p-8 h-full bg-[var(--bg-card)] backdrop-blur-variable rounded-2xl border border-[var(--border-card)] transition-colors duration-500">
         <div className="flex h-16 w-16 items-center justify-center rounded-full text-[var(--text-icon)] transition-colors duration-300 shadow-inner" style={{ background: 'var(--bg-icon-wrapper)'}}>
           {project.icon}
