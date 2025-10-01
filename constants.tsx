@@ -53,6 +53,13 @@ export const AnimatedCubeTransparentIcon = ({ className, ...props }: React.Compo
         </g>
     </svg>
 );
+export const AnimatedPaperAirplaneIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 icon-base ${className || ''}`} {...props}>
+        <g className="transition-transform duration-500 ease-in-out group-hover:-translate-y-1.5 group-hover:translate-x-1.5">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+        </g>
+    </svg>
+);
 
 
 export const PROJECTS: Project[] = [
@@ -77,7 +84,10 @@ export const PROJECTS: Project[] = [
     id: 'content-engine-ai',
     name: 'Content Engine AI',
     description: 'The ultimate command center for your content lifecycle. Plan, generate, and optimize SEO-driven articles at scale. Integrates with Gemini, OpenAI, and more, giving you the best AI for every task.',
-    liveUrls: [{ name: 'Launch Content Engine', url: 'https://content-engine.affiliatemarketingforsuccess.com' }],
+    liveUrls: [
+      { name: 'Launch Content Engine', url: 'https://content-engine.affiliatemarketingforsuccess.com' },
+      { name: 'Content Engine Pro', url: 'https://content-engine-pro.affiliatemarketingforsuccess.com/' }
+    ],
     icon: <AnimatedCubeTransparentIcon />,
     isFeatured: true,
   },
@@ -101,6 +111,13 @@ export const PROJECTS: Project[] = [
     description: 'Generate perfectly optimized, keyword-rich URL slugs that search engines and users love.',
     liveUrls: [{ name: 'Launch App', url: 'https://slug-optimizer.affiliatemarketingforsuccess.com' }],
     icon: <AnimatedLinkIcon />,
+  },
+  {
+    id: 'sitemap-indexer-pro',
+    name: 'Sitemap Indexer Pro',
+    description: "Tired of the indexing lottery? Take control. Sitemap Indexer Pro gives you a direct line to Google's core via the official Indexing API. Submit your URLs with authority and watch as your content gets crawled with priority. The fastest, most effective indexing method is now at your fingertips.",
+    liveUrls: [{ name: 'Launch Indexer', url: 'https://g.co/gemini/share/3f65c95789e0' }],
+    icon: <AnimatedPaperAirplaneIcon />,
   },
   {
     id: 'ai-copilot',
