@@ -126,11 +126,11 @@ export const PROJECTS: Project[] = [
     liveUrls: [{ name: 'Launch App', url: 'https://viral-post.affiliatemarketingforsuccess.com' }],
     icon: <AnimatedCpuChipIcon />,
   },
-    {
-    id: 'photo-ai-enhancer',
-    name: 'Photo AI Enhancer',
-    description: 'Upscale, de-noise, and enhance your images to professional quality, boosting visual appeal and page speed.',
-    liveUrls: [{ name: 'Launch App', url: 'https://photo-enhancer.affiliatemarketingforsuccess.com' }],
+  {
+    id: 'ai-image-engine',
+    name: 'AI Image Engine',
+    description: 'Automate visual content. Connect WordPress, and our AI generates, customizes, and places high-quality images directly into your posts.',
+    liveUrls: [{ name: 'Launch App', url: 'https://ai-image-engine.affiliatemarketingforsuccess.com/' }],
     icon: <AnimatedPhotoIcon />,
   },
 ];
