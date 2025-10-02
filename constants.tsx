@@ -1,3 +1,4 @@
+
 import React from 'react';
 import type { Project, Feature, Testimonial, Resource } from './types';
 
@@ -60,20 +61,25 @@ export const AnimatedPaperAirplaneIcon = ({ className, ...props }: React.Compone
         </g>
     </svg>
 );
+export const AnimatedCodeBracketIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 icon-base ${className || ''}`} {...props}>
+       <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 15" className="transition-transform duration-300 group-hover:scale-110 group-hover:stroke-cyan-400"/>
+    </svg>
+);
 
 
 export const PROJECTS: Project[] = [
   {
     id: 'seo-orchestrator',
     name: 'SEO Orchestrator',
-    description: 'The master tool to coordinate your entire SEO strategy, from keywords to content, ensuring topical authority.',
+    description: 'Architect your search dominance. Map entire content ecosystems, build unshakeable topical authority, and automate a workflow that makes competitors irrelevant.',
     liveUrls: [{ name: 'Launch App', url: 'https://seo-orchestrator.affiliatemarketingforsuccess.com' }],
     icon: <AnimatedDocumentChartBarIcon />,
   },
   {
     id: 'content-optimizer-pro',
     name: 'WordPress Content Optimizer Pro',
-    description: 'Directly optimize your WordPress content for higher rankings with deep semantic analysis.',
+    description: 'Transform WordPress into an SEO powerhouse. Get real-time, data-driven optimizations as you type to ensure every post is perfectly tuned for top rankings.',
     liveUrls: [
       { name: 'Content Optimizer', url: 'https://content-optimizer.affiliatemarketingforsuccess.com' },
       { name: 'Optimizer Pro', url: 'https://content-optimizer-pro.affiliatemarketingforsuccess.com' }
@@ -83,7 +89,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'content-engine-ai',
     name: 'Content Engine AI',
-    description: 'The ultimate command center for your content lifecycle. Plan, generate, and optimize SEO-driven articles at scale. Integrates with Gemini, OpenAI, and more, giving you the best AI for every task.',
+    description: 'The ultimate content factory. Turn a single keyword into a fully researched, optimized, long-form article in minutes. Automate your entire content pipeline at scale.',
     liveUrls: [
       { name: 'Launch Content Engine', url: 'https://content-engine.affiliatemarketingforsuccess.com' },
       { name: 'Content Engine Pro', url: 'https://content-engine-pro.affiliatemarketingforsuccess.com/' }
@@ -94,42 +100,50 @@ export const PROJECTS: Project[] = [
   {
     id: 'html-snippet-ai',
     name: 'HTML Snippet AI',
-    description: 'Beyond Static Text: Instantly generate bespoke HTML tools from your content. Captivate readers with interactive experiences, boost engagement, and earn the rankings you deserve.',
+    description: 'Instantly convert articles into interactive web tools. Generate embeddable calculators and widgets to transform readers into users and skyrocket on-page engagement.',
     liveUrls: [{ name: 'Launch App', url: 'https://html-snippet.affiliatemarketingforsuccess.com' }],
     icon: <AnimatedSparklesIcon />,
   },
   {
     id: 'quiz-forge-ai',
     name: 'QuizForge AI',
-    description: 'PhD-Level Quizzes from Any Post. Transform articles into authoritative, interactive quizzes. Our AI curriculum designer crafts fact-checked questions with rich explanations to captivate your audience, boost on-page time, and build reader loyalty.',
+    description: 'Convert articles into expert-level interactive quizzes. Automatically generate questions that challenge your audience, maximize engagement, and cement your authority.',
     liveUrls: [{ name: 'Launch App', url: 'https://quiz-forge.affiliatemarketingforsuccess.com/' }],
     icon: <AnimatedQuestionMarkCircleIcon />,
   },
   {
     id: 'ai-slug-optimizer',
     name: 'AI Slug Optimizer',
-    description: 'Generate perfectly optimized, keyword-rich URL slugs that search engines and users love.',
+    description: 'Instantly generate perfectly optimized URL slugs that signal maximum relevance and authority to search engines from the very first crawl.',
     liveUrls: [{ name: 'Launch App', url: 'https://slug-optimizer.affiliatemarketingforsuccess.com' }],
     icon: <AnimatedLinkIcon />,
+  },
+   {
+    id: 'schema-generator-pro',
+    name: 'Schema Generator Pro',
+    description: 'Generate flawless, state-of-the-art JSON-LD schema with enterprise-grade AI, ensuring search engines understand your content perfectly for rich results.',
+    liveUrls: [{ name: 'Launch App', url: 'https://g.co/gemini/share/6f89973fbc55' }],
+    icon: <AnimatedCodeBracketIcon />,
+    isFeatured: true,
   },
   {
     id: 'sitemap-indexer-pro',
     name: 'Sitemap Indexer Pro',
-    description: "Tired of the indexing lottery? Take control. Sitemap Indexer Pro gives you a direct line to Google's core via the official Indexing API. Submit your URLs with authority and watch as your content gets crawled with priority. The fastest, most effective indexing method is now at your fingertips.",
+    description: "Command Google to index your content. Leverage the official Google Indexing API to get your URLs priority crawling and faster rankings.",
     liveUrls: [{ name: 'Launch Indexer', url: 'https://g.co/gemini/share/3f65c95789e0' }],
     icon: <AnimatedPaperAirplaneIcon />,
   },
   {
     id: 'ai-copilot',
     name: 'AI Social Media Co-Pilot',
-    description: 'Architect high-impact, credible social media campaigns that actually convert.',
+    description: 'Architect high-impact social media campaigns. Go beyond generic posts to create thought-leading content that builds authority and drives targeted traffic.',
     liveUrls: [{ name: 'Launch App', url: 'https://viral-post.affiliatemarketingforsuccess.com' }],
     icon: <AnimatedCpuChipIcon />,
   },
   {
     id: 'ai-image-engine',
     name: 'AI Image Engine',
-    description: 'Automate visual content. Connect WordPress, and our AI generates, customizes, and places high-quality images directly into your posts.',
+    description: 'An autonomous visual content pipeline for WordPress. Our AI analyzes posts, generates contextually-perfect images, and places them for maximum impact.',
     liveUrls: [{ name: 'Launch App', url: 'https://ai-image-engine.affiliatemarketingforsuccess.com/' }],
     icon: <AnimatedPhotoIcon />,
   },

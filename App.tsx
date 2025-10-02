@@ -25,81 +25,101 @@ const ArrowDownIcon = (props: React.ComponentProps<'svg'>) => (
 
 // --- NEW COMPONENT: Workflow ---
 const Workflow: React.FC = () => {
-    const workflowSteps = [
+    const workflowPhases = [
         {
-            step: 1,
-            title: "Strategize & Dominate",
-            description: "Use the SEO Orchestrator to map out your entire content strategy. Build a pillar of authority that search engines can't ignore.",
-            tools: ["seo-orchestrator"]
+            phase: 1,
+            title: "Strategize & Architect",
+            description: "Lay the unshakable foundation for market dominance. Map content ecosystems and ensure your core structure is primed for Google's crawlers from day one.",
+            tools: ["seo-orchestrator", "sitemap-indexer-pro"],
         },
         {
-            step: 2,
-            title: "Create & Captivate",
-            description: "Generate and optimize content with the WordPress Optimizer, then transform it into interactive experiences using HTML Snippet AI and QuizForge AI.",
-            tools: ["content-optimizer-pro", "html-snippet-ai", "quiz-forge-ai"]
+            phase: 2,
+            title: "Create & Optimize",
+            description: "Shift into high-gear production. Generate entire articles with Content Engine AI, then perfect every on-page element directly in WordPress for guaranteed ranking potential.",
+            tools: ["content-engine-ai", "content-optimizer-pro"],
         },
         {
-            step: 3,
-            title: "Refine & Polish",
-            description: "Perfect every detail. Generate SEO-perfect URLs with the Slug Optimizer and enhance your site's visual appeal with the Photo AI Enhancer.",
-            tools: ["ai-slug-optimizer", "photo-ai-enhancer"]
+            phase: 3,
+            title: "Enhance & Engage",
+            description: "Transform static content into captivating, interactive experiences. Automatically generate images, quizzes, and web tools to maximize user engagement.",
+            tools: ["ai-image-engine", "html-snippet-ai", "quiz-forge-ai"],
         },
         {
-            step: 4,
-            title: "Amplify & Convert",
-            description: "Leverage the AI Social Media Co-Pilot to architect high-impact campaigns that drive traffic back to your authoritative content.",
-            tools: ["ai-copilot"]
-        }
+            phase: 4,
+            title: "Perfect & Publish",
+            description: "Finalize every technical detail for a flawless launch. Optimize URLs for clarity and signal deep context to search engines with enterprise-grade structured data.",
+            tools: ["ai-slug-optimizer", "schema-generator-pro"],
+        },
+        {
+            phase: 5,
+            title: "Amplify & Dominate",
+            description: "Unleash your content. Architect viral social media campaigns that drive targeted traffic back to your perfectly optimized, authoritative content hub.",
+            tools: ["ai-copilot"],
+        },
     ];
 
-    const getToolIcon = (id: string) => {
+    const getToolData = (id: string) => {
         const project = PROJECTS.find(p => p.id === id);
-        // FIX: Add a generic to React.cloneElement to specify the props type.
-        // This resolves a TypeScript error where `className` was not recognized on the generic icon element.
-        return project ? React.cloneElement<any>(project.icon, { className: 'w-6 h-6' }) : null;
+        if (!project) return null;
+        return {
+            name: project.name,
+            icon: React.cloneElement(project.icon, { className: 'w-6 h-6' }),
+        };
     };
 
     return (
-        <section id="workflow" className="py-24 sm:py-32 section-animate">
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center">
+        <section id="workflow" className="py-24 sm:py-32">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center section-animate">
                     <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">From Idea to Authority: The Nexus Workflow</h2>
                     <p className="mt-4 text-lg text-[var(--text-muted)]">
                         A proven, repeatable process for turning content into a competitive advantage.
                     </p>
                 </div>
-                <div className="mt-16 max-w-2xl mx-auto">
-                    <div className="relative">
-                        {workflowSteps.map((item, index) => (
-                            <div key={item.step} className="md:flex items-start relative pb-8">
-                                <div className="flex-shrink-0 w-24 text-center mb-4 md:mb-0">
-                                    <div className="w-16 h-16 rounded-full bg-[var(--bg-card)] border border-[var(--border-card)] inline-flex items-center justify-center">
-                                        <span className="text-2xl font-bold text-[var(--text-heading)]">{item.step}</span>
-                                    </div>
-                                </div>
-                                <div className="md:ml-6 flex-grow">
-                                     <div className="relative p-6 rounded-2xl bg-[var(--bg-card)] backdrop-blur-variable border border-[var(--border-card)]">
-                                        <h3 className="text-xl font-semibold text-[var(--text-heading)] mb-2">{item.title}</h3>
-                                        <p className="text-[var(--text-muted)] mb-4">{item.description}</p>
-                                        <div className="flex items-center gap-3">
-                                            <span className="text-sm font-medium text-[var(--text-muted)]">Tools:</span>
-                                            <div className="flex gap-2 text-[var(--text-icon)]">
-                                                {item.tools.map(toolId => (
-                                                    <div key={toolId} className="w-8 h-8 flex items-center justify-center rounded-full" style={{ background: 'var(--bg-icon-wrapper)'}}>
-                                                        {getToolIcon(toolId)}
-                                                    </div>
-                                                ))}
+            </div>
+            <div className="relative mt-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="absolute left-4 md:left-1/2 -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-transparent via-purple-500/50 to-transparent" aria-hidden="true" />
+                
+                {workflowPhases.map((phase, index) => {
+                    const isLeft = index % 2 !== 0;
+                    return (
+                        <div key={phase.phase} className="relative group/item mb-12">
+                            <div className="absolute left-4 md:left-1/2 -translate-x-1/2 -top-1 w-8 h-8 rounded-full bg-[var(--bg-main)] border-2 border-purple-500 flex items-center justify-center shadow-lg transition-all duration-300 group-hover/item:scale-125 group-hover/item:border-cyan-400">
+                                <span className="font-bold text-sm text-purple-500 transition-colors duration-300 group-hover/item:text-cyan-400">{phase.phase}</span>
+                            </div>
+
+                            <div className={`flex flex-col items-start ${isLeft ? 'md:items-end' : 'md:items-start'}`}>
+                                <div className={`w-full md:w-1/2 ${isLeft ? 'md:text-right' : ''} ${isLeft ? 'md:pr-12' : 'md:pl-12'} pl-12`}>
+                                    <div className="section-animate" style={{ animationDelay: `${index * 100}ms` }}>
+                                        <div className="p-6 rounded-2xl bg-[var(--bg-card)] backdrop-blur-variable border border-[var(--border-card)] shadow-lg transform transition-all duration-500 group-hover/item:scale-[1.02] group-hover/item:shadow-2xl group-hover/item:shadow-purple-500/20">
+                                            <h3 className="text-xl font-semibold text-[var(--text-heading)] mb-2">{phase.title}</h3>
+                                            <p className="text-[var(--text-muted)] mb-4">{phase.description}</p>
+                                            <div className={`flex items-center gap-3 ${isLeft ? 'md:justify-end' : 'md:justify-start'} flex-wrap`}>
+                                                <span className="text-sm font-medium text-[var(--text-muted)]">Tools:</span>
+                                                <div className="flex gap-2 text-[var(--text-icon)] flex-wrap">
+                                                    {phase.tools.map(toolId => {
+                                                        const tool = getToolData(toolId);
+                                                        return tool ? (
+                                                            <div key={toolId} className="relative group/tool">
+                                                                <div className="w-9 h-9 flex items-center justify-center rounded-full transition-all duration-300 transform group-hover/tool:scale-110" style={{ background: 'var(--bg-icon-wrapper)'}}>
+                                                                    {tool.icon}
+                                                                </div>
+                                                                <div className="absolute bottom-full mb-2 w-max px-3 py-1.5 text-sm font-semibold text-white bg-slate-800 rounded-md shadow-lg opacity-0 group-hover/tool:opacity-100 transition-opacity duration-300 pointer-events-none left-1/2 -translate-x-1/2">
+                                                                    {tool.name}
+                                                                    <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-slate-800" />
+                                                                </div>
+                                                            </div>
+                                                        ) : null;
+                                                    })}
+                                                </div>
                                             </div>
                                         </div>
-                                     </div>
+                                    </div>
                                 </div>
-                                {index < workflowSteps.length - 1 && (
-                                    <div className="absolute top-16 left-12 -ml-px w-0.5 h-full bg-gradient-to-b from-purple-500/30 via-cyan-500/30 to-transparent"></div>
-                                )}
                             </div>
-                        ))}
-                    </div>
-                </div>
+                        </div>
+                    );
+                })}
             </div>
         </section>
     );
