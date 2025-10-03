@@ -66,6 +66,21 @@ export const AnimatedCodeBracketIcon = ({ className, ...props }: React.Component
        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 15" className="transition-transform duration-300 group-hover:scale-110 group-hover:stroke-cyan-400"/>
     </svg>
 );
+export const AnimatedShieldCheckIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 icon-base ${className || ''}`} {...props}>
+        <g className="transition-transform duration-300 group-hover:scale-105">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286Zm0 0A11.953 11.953 0 0 1 12 3c1.32 0 2.591.203 3.75.564m-3.75-.564c-3.196 0-6.1-1.248-8.25-3.286" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="m9 12.75 2.25 2.25 3.75-5.25" className="transition-all duration-500 scale-0 group-hover:scale-100 origin-center opacity-0 group-hover:opacity-100" />
+        </g>
+    </svg>
+);
+export const AnimatedCurrencyDollarChartIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 icon-base ${className || ''}`} {...props}>
+       <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.21 12.768 11 12 11c-.768 0-1.536.21-2.121.659L9 12.036m-1.215-1.956L9 9.036m2.121-2.121L12 6.036m0 0l2.121 2.121" className="transition-transform duration-300 group-hover:-rotate-6"/>
+       <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 12.875c0-.621.504-1.125 1.125-1.125h.375c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-.375a1.125 1.125 0 0 1-1.125-1.125v-4.5Z" className="transition-transform duration-300 group-hover:scale-y-110 origin-bottom" />
+       <path strokeLinecap="round" strokeLinejoin="round" d="M16.875 11.625c0-.621.504-1.125 1.125-1.125h.375c.621 0 1.125.504 1.125 1.125v5.25c0 .621-.504 1.125-1.125 1.125h-.375a1.125 1.125 0 0 1-1.125-1.125v-5.25Z" className="transition-transform duration-500 delay-100 group-hover:scale-y-125 origin-bottom" />
+    </svg>
+);
 
 
 export const PROJECTS: Project[] = [
@@ -122,9 +137,24 @@ export const PROJECTS: Project[] = [
     id: 'schema-generator-pro',
     name: 'Schema Generator Pro',
     description: 'Generate flawless, state-of-the-art JSON-LD schema with enterprise-grade AI, ensuring search engines understand your content perfectly for rich results.',
-    liveUrls: [{ name: 'Launch App', url: 'https://g.co/gemini/share/6f89973fbc55' }],
+    liveUrls: [{ name: 'Launch App', url: 'https://g.co/gemini/share/bc6e94878bfc' }],
     icon: <AnimatedCodeBracketIcon />,
     isFeatured: true,
+  },
+  {
+    id: 'wp-seo-optimizer-ai',
+    name: 'WP SEO Optimizer AI',
+    description: 'Your AI-powered SEO audit and content generation suite. Crawl your site, get deep insights, and generate optimized content—no personal API key required.',
+    liveUrls: [{ name: 'Launch Optimizer', url: 'https://title-seo-optimizer.affiliatemarketingforsuccess.com' }],
+    icon: <AnimatedShieldCheckIcon />,
+    isFeatured: true,
+  },
+  {
+    id: 'affiliate-monetization-analyzer',
+    name: 'Affiliate Monetization Analyzer',
+    description: 'Instantly crawl any sitemap to uncover hidden affiliate revenue opportunities. Our AI analysis scores each page and provides actionable strategies to boost your earnings.',
+    liveUrls: [{ name: 'Launch Analyzer', url: 'https://monetization-analyzer.affiliatemarketingforsuccess.com' }],
+    icon: <AnimatedCurrencyDollarChartIcon />,
   },
   {
     id: 'sitemap-indexer-pro',

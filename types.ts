@@ -22,7 +22,8 @@ export interface Project {
   name: string;
   description: string;
   liveUrls?: LiveUrl[];
-  icon: React.ReactElement;
+  // FIX: Updated the type for `icon` to be more specific. The previous `React.ReactElement` type was too generic and caused a type error when trying to clone the element with new props in `App.tsx`. This new type correctly reflects that the icon is an SVG element and accepts SVG props.
+  icon: React.ReactElement<React.ComponentProps<'svg'>>;
   isFeatured?: boolean;
 }
 
