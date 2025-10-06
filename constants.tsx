@@ -96,7 +96,7 @@ export const PROJECTS: Project[] = [
     name: 'WordPress Content Optimizer Pro',
     description: 'Transform WordPress into an SEO powerhouse. Get real-time, data-driven optimizations as you type to ensure every post is perfectly tuned for top rankings.',
     liveUrls: [
-      { name: 'Content Optimizer', url: 'https://content-optimizer.affiliatemarketingforsuccess.com' },
+      { name: 'Content Optimizer', url: 'https://best-content-optimizer.affiliatemarketingforsuccess.com' },
       { name: 'Optimizer Pro', url: 'https://content-optimizer-pro.affiliatemarketingforsuccess.com' }
     ],
     icon: <AnimatedWrenchScrewdriverIcon />,
