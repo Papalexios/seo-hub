@@ -137,7 +137,7 @@ export const PROJECTS: Project[] = [
     id: 'schema-generator-pro',
     name: 'Schema Generator Pro',
     description: 'Generate flawless, state-of-the-art JSON-LD schema with enterprise-grade AI, ensuring search engines understand your content perfectly for rich results.',
-    liveUrls: [{ name: 'Launch App', url: 'https://g.co/gemini/share/bc6e94878bfc' }],
+    liveUrls: [{ name: 'Launch App', url: 'https://g.co/gemini/share/64f819ace8f5' }],
     icon: <AnimatedCodeBracketIcon />,
     isFeatured: true,
   },
