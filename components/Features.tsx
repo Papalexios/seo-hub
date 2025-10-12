@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FEATURES } from '../constants';
 
@@ -6,9 +7,9 @@ const Features: React.FC = () => {
     <section id="features" className="py-24 sm:py-32 section-animate">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">What Makes Us Different</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">The Core Philosophy</h2>
           <p className="mt-4 text-lg text-[var(--text-muted)]">
-            Exclusive advantages you won't find anywhere else.
+            This isn't just software. It's a fundamentally different approach to winning.
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3" style={{ perspective: '1000px' }}>

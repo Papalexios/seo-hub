@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const CheckIcon = () => (
@@ -8,9 +9,9 @@ const CheckIcon = () => (
 
 const RiskReversal: React.FC = () => {
   const advantages = [
-    { title: "Completely Free, Forever", description: "No trials, no hidden fees, no credit card required. Gain full access to our powerful AI arsenal, provided by Alexios Papaioannou." },
-    { title: "Instant Competitive Edge", description: "While your competitors pay for fragmented tools, you can deploy a fully integrated SEO ecosystem to dominate your niche—starting today." },
-    { title: "Backed by Proven Expertise", description: "This suite is a product of insights from affiliatemarketingforsuccess.com, giving you tools built on proven, real-world strategies." }
+    { title: "It's Free. Period.", description: "This isn't a trial or a 'freemium' version. You get the full, unrestricted arsenal. Why? Because the best strategy wins, not the biggest budget." },
+    { title: "Deploy a Superior System Today.", description: "While your competition is stuck paying for and juggling inferior tools, you can deploy a more cohesive, powerful system right now." },
+    { title: "Built from a Proven Playbook.", description: "This suite is the direct result of years of in-the-trenches experience from affiliatemarketingforsuccess.com. You're getting battle-tested tools, not corporate software." }
   ];
 
   return (
@@ -22,15 +23,15 @@ const RiskReversal: React.FC = () => {
           <div className="absolute inset-0 bg-[conic-gradient(from_90deg_at_50%_50%,#22d3ee_0%,#a855f7_50%,#22d3ee_100%)] opacity-[var(--risk-reversal-glow)]"></div>
         </div>
         <div className="relative z-10 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">Your Unfair Advantage is a Click Away. And It's Free.</h2>
-          <p className="mt-4 text-lg text-[var(--text-muted)]">This entire suite is provided free of charge to empower your digital strategy.</p>
+          <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">There Is No Catch.</h2>
+          <p className="mt-4 text-lg text-[var(--text-muted)]">This entire system is free. Here’s why that gives you an insurmountable edge.</p>
         </div>
         <ul role="list" className="relative z-10 mt-10 space-y-6 text-sm leading-6 text-[var(--text-main)]">
           {advantages.map((adv, index) => (
             <li key={index} className="flex gap-x-3">
               <CheckIcon />
               <span className="text-left">
-                <strong className="font-semibold text-[var(--text-heading)]">{adv.title}:</strong> {adv.description}
+                <strong className="font-semibold text-[var(--text-heading)]">{adv.title}</strong> {adv.description}
               </span>
             </li>
           ))}

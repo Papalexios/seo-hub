@@ -87,14 +87,14 @@ export const PROJECTS: Project[] = [
   {
     id: 'seo-orchestrator',
     name: 'SEO Orchestrator',
-    description: 'Architect your search dominance. Map entire content ecosystems, build unshakeable topical authority, and automate a workflow that makes competitors irrelevant.',
+    description: "The Problem: You're creating content reactively. The Outcome: You build an impenetrable fortress of topical authority that Google can't ignore, making your rankings resilient and your traffic predictable.",
     liveUrls: [{ name: 'Launch App', url: 'https://seo-orchestrator.affiliatemarketingforsuccess.com' }],
     icon: <AnimatedDocumentChartBarIcon />,
   },
   {
     id: 'content-optimizer-pro',
     name: 'WordPress Content Optimizer Pro',
-    description: 'Transform WordPress into an SEO powerhouse. Get real-time, data-driven optimizations as you type to ensure every post is perfectly tuned for top rankings.',
+    description: "The Problem: On-page SEO is a constant guessing game of 'is this good enough?' The Outcome: You hit 'publish' with total confidence, knowing your content is mathematically tuned to outperform the current top results.",
     liveUrls: [
       { name: 'Content Optimizer', url: 'https://best-content-optimizer.affiliatemarketingforsuccess.com' },
       { name: 'Optimizer Pro', url: 'https://content-optimizer-pro.affiliatemarketingforsuccess.com' }
@@ -104,9 +104,9 @@ export const PROJECTS: Project[] = [
   {
     id: 'content-engine-ai',
     name: 'Content Engine AI',
-    description: 'The ultimate content factory. Turn a single keyword into a fully researched, optimized, long-form article in minutes. Automate your entire content pipeline at scale.',
+    description: "The Problem: Manual content creation is a bottleneck that kills your growth. The Outcome: You achieve 100x the content output of your competitors without sacrificing quality, allowing you to dominate entire niches in weeks, not years.",
     liveUrls: [
-      { name: 'Launch Content Engine', url: 'https://content-engine.affiliatemarketingforsuccess.com' },
+      { name: 'Launch Content Engine', url: 'https://rank-content.affiliatemarketingforsuccess.com/' },
       { name: 'Content Engine Pro', url: 'https://content-engine-pro.affiliatemarketingforsuccess.com/' }
     ],
     icon: <AnimatedCubeTransparentIcon />,
@@ -115,28 +115,28 @@ export const PROJECTS: Project[] = [
   {
     id: 'html-snippet-ai',
     name: 'HTML Snippet AI',
-    description: 'Instantly convert articles into interactive web tools. Generate embeddable calculators and widgets to transform readers into users and skyrocket on-page engagement.',
+    description: 'The Problem: Your content is static and passive. The Outcome: You transform articles into interactive assets that generate backlinks, capture leads, and send powerful engagement signals to search engines.',
     liveUrls: [{ name: 'Launch App', url: 'https://html-snippet.affiliatemarketingforsuccess.com' }],
     icon: <AnimatedSparklesIcon />,
   },
   {
     id: 'quiz-forge-ai',
     name: 'QuizForge AI',
-    description: 'Convert articles into expert-level interactive quizzes. Automatically generate questions that challenge your audience, maximize engagement, and cement your authority.',
+    description: 'The Problem: Your audience consumes your content and leaves. The Outcome: You create an active learning experience that doubles time-on-page and positions your brand as the definitive educator in your field.',
     liveUrls: [{ name: 'Launch App', url: 'https://quiz-forge.affiliatemarketingforsuccess.com/' }],
     icon: <AnimatedQuestionMarkCircleIcon />,
   },
   {
     id: 'ai-slug-optimizer',
     name: 'AI Slug Optimizer',
-    description: 'Instantly generate perfectly optimized URL slugs that signal maximum relevance and authority to search engines from the very first crawl.',
+    description: 'The Problem: Your URLs are an afterthought, messy and unoptimized. The Outcome: You perfect a small but crucial ranking factor effortlessly, signaling maximum relevance to Google from the instant you publish.',
     liveUrls: [{ name: 'Launch App', url: 'https://slug-optimizer.affiliatemarketingforsuccess.com' }],
     icon: <AnimatedLinkIcon />,
   },
    {
     id: 'schema-generator-pro',
     name: 'Schema Generator Pro',
-    description: 'Generate flawless, state-of-the-art JSON-LD schema with enterprise-grade AI, ensuring search engines understand your content perfectly for rich results.',
+    description: "The Problem: Schema is complex, and getting it wrong is worse than doing nothing. The Outcome: You generate flawless JSON-LD that helps you win rich snippets, increase CTR, and stand out on a crowded SERP.",
     liveUrls: [{ name: 'Launch App', url: 'https://g.co/gemini/share/64f819ace8f5' }],
     icon: <AnimatedCodeBracketIcon />,
     isFeatured: true,
@@ -144,7 +144,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'wp-seo-optimizer-ai',
     name: 'WP SEO Optimizer AI',
-    description: 'Your AI-powered SEO audit and content generation suite. Crawl your site, get deep insights, and generate optimized content—no personal API key required.',
+    description: 'The Problem: You need deep site analysis and content ideas, but expensive tools are out of reach. The Outcome: You get an enterprise-level SEO audit and content strategy generator without the enterprise price tag.',
     liveUrls: [{ name: 'Launch Optimizer', url: 'https://title-seo-optimizer.affiliatemarketingforsuccess.com' }],
     icon: <AnimatedShieldCheckIcon />,
     isFeatured: true,
@@ -152,28 +152,28 @@ export const PROJECTS: Project[] = [
   {
     id: 'affiliate-monetization-analyzer',
     name: 'Affiliate Monetization Analyzer',
-    description: 'Instantly crawl any sitemap to uncover hidden affiliate revenue opportunities. Our AI analysis scores each page and provides actionable strategies to boost your earnings.',
+    description: "The Problem: You're leaving money on the table with unoptimized affiliate content. The Outcome: You instantly identify and receive actionable strategies for the most lucrative monetization opportunities on your site.",
     liveUrls: [{ name: 'Launch Analyzer', url: 'https://monetization-analyzer.affiliatemarketingforsuccess.com' }],
     icon: <AnimatedCurrencyDollarChartIcon />,
   },
   {
     id: 'sitemap-indexer-pro',
     name: 'Sitemap Indexer Pro',
-    description: "Command Google to index your content. Leverage the official Google Indexing API to get your URLs priority crawling and faster rankings.",
+    description: "The Problem: You publish content and wait for Google to find it, losing valuable time. The Outcome: You command Google's attention, getting your most important pages crawled and ranked faster via the official API.",
     liveUrls: [{ name: 'Launch Indexer', url: 'https://g.co/gemini/share/3f65c95789e0' }],
     icon: <AnimatedPaperAirplaneIcon />,
   },
   {
     id: 'ai-copilot',
     name: 'AI Social Media Co-Pilot',
-    description: 'Architect high-impact social media campaigns. Go beyond generic posts to create thought-leading content that builds authority and drives targeted traffic.',
+    description: 'The Problem: Your social media is just lazy links to your blog posts. The Outcome: You transform each article into a strategic, multi-platform campaign that drives targeted traffic and builds a real brand.',
     liveUrls: [{ name: 'Launch App', url: 'https://viral-post.affiliatemarketingforsuccess.com' }],
     icon: <AnimatedCpuChipIcon />,
   },
   {
     id: 'ai-image-engine',
     name: 'AI Image Engine',
-    description: 'An autonomous visual content pipeline for WordPress. Our AI analyzes posts, generates contextually-perfect images, and places them for maximum impact.',
+    description: "The Problem: Sourcing relevant, high-quality images is a tedious manual bottleneck. The Outcome: You get a fully autonomous visual content pipeline that makes your articles more engaging and professional, saving you hours.",
     liveUrls: [{ name: 'Launch App', url: 'https://ai-image-engine.affiliatemarketingforsuccess.com/' }],
     icon: <AnimatedPhotoIcon />,
   },
@@ -183,20 +183,20 @@ export const PROJECTS: Project[] = [
 export const FEATURES: Feature[] = [
     {
         id: 'feature-1',
-        name: 'Unified SEO Ecosystem',
-        description: 'Unlike fragmented tools, our suite provides a cohesive workflow from keyword research to final publication, ensuring consistency and maximizing impact.',
+        name: 'Stop Buying Tools. Deploy a System.',
+        description: "Competitors buy features; winners deploy systems. Nexus isn't a collection of apps—it's a single, cohesive workflow where each tool amplifies the power of the others, creating an exponential effect on your results.",
         icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>,
     },
     {
         id: 'feature-2',
-        name: 'Topical Authority Engine',
-        description: "Our exclusive AI model doesn't just stuff keywords; it builds true topical authority by understanding semantic relationships and user intent.",
+        name: 'Built on Strategy, Not Theory',
+        description: "These tools weren't developed in a vacuum. They are the direct result of years of in-the-trenches SEO and affiliate marketing experience. You're not getting generic software; you're getting a battle-tested methodology.",
         icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a7.5 7.5 0 100 15 7.5 7.5 0 000-15zM21 21l-5.197-5.197" /></svg>,
     },
     {
         id: 'feature-3',
-        name: 'Real-Time SERP Analysis',
-        description: 'Stay ahead of the competition with live SERP data integrated directly into our content tools, providing actionable insights instantly.',
+        name: 'The $0 Price Tag Advantage',
+        description: "Your single biggest advantage is leverage. While your competitors sink hundreds of dollars a month into their tool stack, you get a superior, fully integrated system for free, allowing you to reinvest that capital into growth.",
         icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-3.75-2.25m3.75 2.25l-1.994 2.184M18 18v-3.75m-7.5-10.5H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.25" /></svg>,
     }
 ];
@@ -204,21 +204,21 @@ export const FEATURES: Feature[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 'testimonial-1',
-    quote: "Nexus AI is the first suite that feels like a strategic partner, not just a tool. The SEO Orchestrator's focus on topical authority is unparalleled—it provided a level of strategic clarity we couldn't find anywhere else.",
+    quote: "We were stuck in a cycle of writing one-off articles. The SEO Orchestrator forced us to think bigger. We mapped out a 50-article cluster, executed with the Content Engine, and tripled our organic traffic in 90 days. It's a fundamental shift in strategy.",
     name: 'Sarah L.',
     title: 'Founder, Growth Hackers Weekly',
     avatarUrl: 'https://i.pravatar.cc/100?u=sarah',
   },
   {
     id: 'testimonial-2',
-    quote: "ContentForge AI allowed us to move beyond static text. Embedding interactive tools directly into our articles skyrocketed our user engagement and time-on-page. It’s a game-changer for creating content that not only ranks but also captivates.",
+    quote: "I used the HTML Snippet AI to turn a boring blog post about mortgage rates into an interactive calculator. That single page now accounts for 40% of our leads and ranks #1 for our main commercial keyword. The engagement signals are off the charts.",
     name: 'Mike R.',
     title: 'Head of Content, TechSavvy',
     avatarUrl: 'https://i.pravatar.cc/100?u=mike',
   },
   {
     id: 'testimonial-3',
-    quote: "The seamless integration is what sets Nexus AI apart. We replaced three separate subscriptions with this one cohesive ecosystem. The ROI wasn't just fast—it was immediate and substantial.",
+    quote: "We cancelled our $300/mo SEO software subscription and replaced it entirely with Nexus AI. Not only are we saving $3,600 a year, but our workflow is faster and our results are better because everything is finally in one place. The ROI is infinite.",
     name: 'Elena G.',
     title: 'Digital Marketing Director',
     avatarUrl: 'https://i.pravatar.cc/100?u=elena',
@@ -247,22 +247,22 @@ const LightBulbIcon = (props: React.ComponentProps<'svg'>) => (
 export const RESOURCES: Resource[] = [
     {
         id: 'resource-1',
-        title: 'Develop a Winning Content Strategy',
-        description: 'Learn the foundational principles of creating content that not only ranks but also builds lasting authority in your niche.',
+        title: 'The Content Strategy That Actually Wins',
+        description: 'Move beyond basic blogging. This is the blueprint for creating a content ecosystem that builds a moat around your business.',
         url: 'https://affiliatemarketingforsuccess.com/blogging/winning-content-strategy/',
         icon: <BookOpenIcon />,
     },
     {
         id: 'resource-2',
-        title: 'Build a High-Impact SEO Strategy',
-        description: 'Go beyond keywords. Discover how to construct a comprehensive SEO framework that delivers sustainable, long-term results.',
+        title: 'How to Build a Real SEO Strategy',
+        description: "An actionable framework for sustainable, long-term traffic growth that doesn't rely on chasing algorithm updates.",
         url: 'https://affiliatemarketingforsuccess.com/seo/build-an-effective-seo-strategy/',
         icon: <ChartPieIcon />,
     },
     {
         id: 'resource-3',
-        title: 'Why AI is the Future of SEO',
-        description: 'Understand the paradigm shift. See how leveraging AI tools is no longer an option, but a necessity for competitive SEO.',
+        title: 'Why Your Competitors Using AI Will Crush You',
+        description: 'A blunt look at the new landscape of SEO. Learn why leveraging AI isn\'t an option—it\'s a requirement for survival.',
         url: 'https://affiliatemarketingforsuccess.com/ai/ai-future-of-seo/',
         icon: <LightBulbIcon />,
     },

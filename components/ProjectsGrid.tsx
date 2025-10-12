@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { PROJECTS } from '../constants';
 import type { Project } from '../types';
@@ -39,9 +40,9 @@ const ProjectsGrid: React.FC = () => {
     <section id="tools" className="py-24 sm:py-32 section-animate">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">Your Complete SEO Arsenal</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">The Unfair Advantage Arsenal</h2>
           <p className="mt-4 text-lg text-[var(--text-muted)]">
-            A synergistic suite of tools designed to work together, amplifying your results.
+            Each tool is a force multiplier. Together, they create an unstoppable system.
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3" style={{ perspective: '1000px' }}>

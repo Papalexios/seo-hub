@@ -24,11 +24,11 @@ const Footer: React.FC = () => {
           </a>
           
           <p className="max-w-lg text-base text-[var(--text-muted)] mb-6">
-            This App is Created by Alexios Papaioannou, Owner of <a href="https://affiliatemarketingforsuccess.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-[var(--text-link)] hover:text-[var(--text-link-hover)] transition-colors hover:underline">affiliatemarketingforsuccess.com</a>
+            Nexus AI is an unfair advantage created by Alexios Papaioannou, owner of <a href="https://affiliatemarketingforsuccess.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-[var(--text-link)] hover:text-[var(--text-link-hover)] transition-colors hover:underline">affiliatemarketingforsuccess.com</a>
           </p>
           
           <nav className="mb-8" aria-label="Footer navigation">
-            <p className="text-sm text-[var(--text-main)] mb-3">Learn more about:</p>
+            <p className="text-sm text-[var(--text-main)] mb-3">Learn more from the playbook:</p>
             <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
               {footerLinks.map((link) => (
                 <li key={link.name}>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { TESTIMONIALS } from '../constants';
 
@@ -11,9 +12,9 @@ const Testimonials: React.FC = () => {
     <section className="py-24 sm:py-32 section-animate">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">Why Professionals Are Making the Switch</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">Real Results from the Unfair Advantage</h2>
             <p className="mt-4 text-lg text-[var(--text-muted)]">
-                Hear from marketers who've gained a definitive edge with Nexus AI.
+                Hear from operators who stopped buying tools and started deploying a system.
             </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">

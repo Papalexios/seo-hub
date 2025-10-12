@@ -1,3 +1,4 @@
+
 import React, { useContext } from 'react';
 import { ThemeContext } from '../types';
 
@@ -39,7 +40,7 @@ const Header: React.FC = () => {
                 <span className="text-xl font-bold tracking-tight text-[var(--text-heading)]">Nexus AI</span>
               </a>
               <p className="text-[10px] sm:text-xs text-[var(--text-muted)] ml-10 -mt-1">
-                From the creators of <a href="https://affiliatemarketingforsuccess.com" target="_blank" rel="noopener noreferrer" className="font-medium text-[var(--text-link)] hover:text-[var(--text-link-hover)] transition-colors hover:underline">AffiliateMarketingForSuccess.com</a>
+                An Unfair Advantage by <a href="https://affiliatemarketingforsuccess.com" target="_blank" rel="noopener noreferrer" className="font-medium text-[var(--text-link)] hover:text-[var(--text-link-hover)] transition-colors hover:underline">AffiliateMarketingForSuccess.com</a>
               </p>
             </div>
           </div>
@@ -48,7 +49,7 @@ const Header: React.FC = () => {
               href="#tools"
               className="hidden sm:inline-flex items-center justify-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-[var(--bg-main)]"
             >
-              Explore Tools
+              Explore The Arsenal
             </a>
             <button
               onClick={toggleTheme}

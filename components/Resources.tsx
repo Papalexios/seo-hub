@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RESOURCES } from '../constants';
 import type { Resource } from '../types';
@@ -17,7 +18,7 @@ const ResourceCard: React.FC<{ resource: Resource }> = ({ resource }) => {
         <h3 className="mt-5 text-lg font-semibold text-[var(--text-heading)]">{resource.title}</h3>
         <p className="mt-2 text-sm text-[var(--text-muted)] flex-grow">{resource.description}</p>
         <span className="mt-6 text-sm font-medium text-[var(--text-link)] group-hover:text-[var(--text-link-hover)] transition-colors">
-          Read Article <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
+          Read The Playbook <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
         </span>
       </div>
     </a>
@@ -29,9 +30,9 @@ const Resources: React.FC = () => {
     <section id="resources" className="py-24 sm:py-32 section-animate">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">From the Knowledge Hub</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">From the Playbook</h2>
           <p className="mt-4 text-lg text-[var(--text-muted)]">
-            Actionable insights to complement your new AI toolkit.
+            The tools are the weapons. This is the strategic intelligence you need to wield them.
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3" style={{ perspective: '1000px' }}>

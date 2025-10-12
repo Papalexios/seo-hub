@@ -28,32 +28,32 @@ const Workflow: React.FC = () => {
     const workflowPhases = [
         {
             phase: 1,
-            title: "Strategize & Architect",
-            description: "Lay the unshakable foundation for market dominance. Map content ecosystems and ensure your core structure is primed for Google's crawlers from day one.",
+            title: "Strategize: Build Your Kingdom",
+            description: "Stop chasing keywords. Start building empires. Here, you architect your entire content fortress, mapping topic clusters and internal links to establish dominance before writing a single word.",
             tools: ["seo-orchestrator", "sitemap-indexer-pro"],
         },
         {
             phase: 2,
-            title: "Create & Optimize",
-            description: "Shift into high-gear production. Generate entire articles with Content Engine AI, then perfect every on-page element directly in WordPress for guaranteed ranking potential.",
+            title: "Create: Automate Your Authority",
+            description: "Shift from manual labor to automated scale. Generate entire, rank-ready articles in minutes. Then, perfect every on-page element with real-time data to guarantee a competitive edge.",
             tools: ["content-engine-ai", "content-optimizer-pro"],
         },
         {
             phase: 3,
-            title: "Enhance & Engage",
-            description: "Transform static content into captivating, interactive experiences. Automatically generate images, quizzes, and web tools to maximize user engagement.",
+            title: "Enhance: Engineer Engagement",
+            description: "Transform static text into dynamic, high-value assets. Convert articles into interactive tools, quizzes, and visually rich experiences that skyrocket dwell time and user satisfaction.",
             tools: ["ai-image-engine", "html-snippet-ai", "quiz-forge-ai"],
         },
         {
             phase: 4,
-            title: "Perfect & Publish",
-            description: "Finalize every technical detail for a flawless launch. Optimize URLs for clarity and signal deep context to search engines with enterprise-grade structured data.",
+            title: "Perfect: Master the Technicals",
+            description: "Nail the 1% of details that your competitors ignore. Optimize every URL for clarity and deploy flawless, enterprise-grade structured data that demands Google's attention and respect.",
             tools: ["ai-slug-optimizer", "schema-generator-pro"],
         },
         {
             phase: 5,
-            title: "Amplify & Dominate",
-            description: "Unleash your content. Architect viral social media campaigns that drive targeted traffic back to your perfectly optimized, authoritative content hub.",
+            title: "Amplify: Dominate Distribution",
+            description: "Publication is not the finish line. Systematically amplify your content across social channels, turning each article into a traffic-driving campaign that solidifies your authority.",
             tools: ["ai-copilot"],
         },
     ];
@@ -71,9 +71,9 @@ const Workflow: React.FC = () => {
         <section id="workflow" className="py-24 sm:py-32">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center section-animate">
-                    <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">From Idea to Authority: The Nexus Workflow</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">From Idea to Market Dominance: The System</h2>
                     <p className="mt-4 text-lg text-[var(--text-muted)]">
-                        A proven, repeatable process for turning content into a competitive advantage.
+                        This isn't a collection of tools. It's a proven, repeatable system for building a competitive moat.
                     </p>
                 </div>
             </div>
@@ -95,7 +95,7 @@ const Workflow: React.FC = () => {
                                             <h3 className="text-xl font-semibold text-[var(--text-heading)] mb-2">{phase.title}</h3>
                                             <p className="text-[var(--text-muted)] mb-4">{phase.description}</p>
                                             <div className={`flex items-center gap-3 ${isLeft ? 'md:justify-end' : 'md:justify-start'} flex-wrap`}>
-                                                <span className="text-sm font-medium text-[var(--text-muted)]">Tools:</span>
+                                                <span className="text-sm font-medium text-[var(--text-muted)]">Arsenal:</span>
                                                 <div className="flex gap-2 text-[var(--text-icon)] flex-wrap">
                                                     {phase.tools.map(toolId => {
                                                         const tool = getToolData(toolId);
@@ -128,11 +128,11 @@ const Workflow: React.FC = () => {
 // --- NEW COMPONENT: Comparison ---
 const Comparison: React.FC = () => {
     const comparisonData = [
-        { feature: 'Workflow', nexus: 'Fully Integrated Ecosystem', others: 'Scattered, Fragmented Tools' },
-        { feature: 'Strategy Focus', nexus: 'Builds Lasting Topical Authority', others: 'Basic Keyword Stuffing' },
-        { feature: 'Cost', nexus: 'Completely Free, Forever', others: 'Multiple Expensive Subscriptions' },
-        { feature: 'User Experience', nexus: 'Unified, Cohesive Interface', others: 'Juggling Multiple Logins & UIs' },
-        { feature: 'Development', nexus: 'Built on Proven, Real-World SEO', others: 'Generic, One-Size-Fits-All Logic' }
+        { feature: 'Workflow', nexus: 'A single, unified system', others: 'Juggling 5+ disconnected tools' },
+        { feature: 'Strategy', nexus: 'Building a competitive moat', others: 'Reactively chasing keywords' },
+        { feature: 'Cost', nexus: '$0. Forever.', others: '$200 - $500+/month' },
+        { feature: 'Output', nexus: 'Data-driven, authoritative assets', others: 'Generic, "me-too" content' },
+        { feature: 'Result', nexus: 'Market dominance & predictable traffic', others: 'Inconsistent rankings & slow growth' }
     ];
     return (
         <section id="comparison" className="py-24 sm:py-32 section-animate">
@@ -140,7 +140,7 @@ const Comparison: React.FC = () => {
                 <div className="text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl">The Old Way vs. The Nexus Way</h2>
                     <p className="mt-4 text-lg text-[var(--text-muted)]">
-                        See why an integrated ecosystem delivers exponentially better results.
+                        The difference between being a player in the game and owning the entire league.
                     </p>
                 </div>
                 <div className="mt-12 max-w-4xl mx-auto">
@@ -148,9 +148,9 @@ const Comparison: React.FC = () => {
                         <table className="w-full text-left divide-y divide-[var(--border-card)]">
                             <thead className="bg-white/5 dark:bg-black/5">
                                 <tr>
-                                    <th scope="col" className="py-4 px-6 text-lg font-semibold text-[var(--text-heading)]">Feature</th>
+                                    <th scope="col" className="py-4 px-6 text-lg font-semibold text-[var(--text-heading)]">Attribute</th>
                                     <th scope="col" className="py-4 px-6 text-lg font-semibold text-[var(--text-heading)]">Nexus AI (Your Unfair Advantage)</th>
-                                    <th scope="col" className="py-4 px-6 text-lg font-semibold text-[var(--text-heading)]">Other Tools</th>
+                                    <th scope="col" className="py-4 px-6 text-lg font-semibold text-[var(--text-heading)]">Everyone Else (Your Competitors)</th>
                                 </tr>
                             </thead>
                             <tbody className="divide-y divide-[var(--border-card)]">
