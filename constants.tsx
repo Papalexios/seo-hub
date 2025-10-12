@@ -96,7 +96,7 @@ export const PROJECTS: Project[] = [
     name: 'WordPress Content Optimizer Pro',
     description: "The Problem: On-page SEO is a constant guessing game of 'is this good enough?' The Outcome: You hit 'publish' with total confidence, knowing your content is mathematically tuned to outperform the current top results.",
     liveUrls: [
-      { name: 'Content Optimizer', url: 'https://best-content-optimizer.affiliatemarketingforsuccess.com' },
+      { name: 'Content Optimizer', url: 'https://ai-powered-content-pro.affiliatemarketingforsuccess.com' },
       { name: 'Optimizer Pro', url: 'https://content-optimizer-pro.affiliatemarketingforsuccess.com' }
     ],
     icon: <AnimatedWrenchScrewdriverIcon />,
@@ -106,7 +106,7 @@ export const PROJECTS: Project[] = [
     name: 'Content Engine AI',
     description: "The Problem: Manual content creation is a bottleneck that kills your growth. The Outcome: You achieve 100x the content output of your competitors without sacrificing quality, allowing you to dominate entire niches in weeks, not years.",
     liveUrls: [
-      { name: 'Launch Content Engine', url: 'https://rank-content.affiliatemarketingforsuccess.com/' },
+      { name: 'Launch Content Engine', url: 'https://ai-powered-content.affiliatemarketingforsuccess.com/' },
       { name: 'Content Engine Pro', url: 'https://content-engine-pro.affiliatemarketingforsuccess.com/' }
     ],
     icon: <AnimatedCubeTransparentIcon />,
