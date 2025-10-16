@@ -106,8 +106,8 @@ export const PROJECTS: Project[] = [
     name: 'Content Engine AI',
     description: "The Problem: Manual content creation is a bottleneck that kills your growth. The Outcome: You achieve 100x the content output of your competitors without sacrificing quality, allowing you to dominate entire niches in weeks, not years.",
     liveUrls: [
-      { name: 'Launch Content Engine', url: 'https://ai-powered-content.affiliatemarketingforsuccess.com/' },
-      { name: 'Content Engine Pro', url: 'https://powered-content-pro.affiliatemarketingforsuccess.com/' }
+      { name: 'Launch Content Engine', url: 'https://ai-content-optimizer.affiliatemarketingforsuccess.com/' },
+      { name: 'Content Engine Pro', url: 'https://ai-content-optimizer-pro.affiliatemarketingforsuccess.com/' }
     ],
     icon: <AnimatedCubeTransparentIcon />,
     isFeatured: true,
