@@ -1,4 +1,3 @@
-
 import React, { useContext } from 'react';
 import { ThemeContext } from '../types';
 
@@ -20,51 +19,37 @@ const StarIcon = (props: React.ComponentProps<'svg'>) => (
     </svg>
 );
 
-
 const Header: React.FC = () => {
   const themeContext = useContext(ThemeContext);
   if (!themeContext) return null;
   const { theme, toggleTheme } = themeContext;
 
+  const ThemeIcon = theme === 'light' ? MoonIcon : theme === 'dark' ? StarIcon : SunIcon;
+
   return (
     <header className="sticky top-0 z-50">
-       <div className="absolute inset-0 bg-[var(--bg-header)] backdrop-blur-xl border-b border-[var(--border-header)] transition-colors duration-500"></div>
+       <div className="absolute inset-0 bg-[var(--bg-header)] backdrop-blur-xl border-b border-[var(--border-main)] transition-colors duration-500"></div>
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-3">
-          <div className="flex-shrink-0">
-            <div>
-              <a href="#" className="flex items-center space-x-2">
-                <svg className="h-8 w-8 text-cyan-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
-                </svg>
-                <span className="text-xl font-bold tracking-tight text-[var(--text-heading)]">Nexus AI</span>
-              </a>
-              <p className="text-[10px] sm:text-xs text-[var(--text-muted)] ml-10 -mt-1">
-                An Unfair Advantage by <a href="https://affiliatemarketingforsuccess.com" target="_blank" rel="noopener noreferrer" className="font-medium text-[var(--text-link)] hover:text-[var(--text-link-hover)] transition-colors hover:underline">AffiliateMarketingForSuccess.com</a>
-              </p>
-            </div>
-          </div>
+        <div className="flex items-center justify-between py-4">
+          <a href="#" className="flex items-center space-x-2">
+            <svg className="h-8 w-8 text-[var(--accent-primary)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+            <span className="text-xl font-bold tracking-tight text-[var(--text-heading)] transition-colors duration-500">Nexus AI</span>
+          </a>
           <div className="flex items-center gap-4">
             <a
               href="#tools"
-              className="hidden sm:inline-flex items-center justify-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-cyan-500/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-[var(--bg-main)]"
+              className="hidden sm:inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-[var(--accent-primary)] to-[var(--text-link)] px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-[var(--bg-main)]"
             >
               Explore The Arsenal
             </a>
             <button
               onClick={toggleTheme}
-              className="relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--bg-button-theme)] text-[var(--text-button-theme)] hover:bg-[var(--bg-button-theme-hover)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-[var(--bg-main)]"
+              className="relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--bg-soft)] text-[var(--text-muted)] hover:text-[var(--text-heading)] transition-all duration-300 border border-[var(--border-main)]"
               aria-label="Toggle theme"
             >
-              <span className={`absolute transition-all duration-300 ease-in-out transform ${theme === 'light' ? 'rotate-0 scale-100 opacity-100' : 'rotate-90 scale-50 opacity-0'}`}>
-                <SunIcon className="w-5 h-5" />
-              </span>
-              <span className={`absolute transition-all duration-300 ease-in-out transform ${theme === 'dark' ? 'rotate-0 scale-100 opacity-100' : 'rotate-90 scale-50 opacity-0'}`}>
-                <MoonIcon className="w-5 h-5" />
-              </span>
-               <span className={`absolute transition-all duration-300 ease-in-out transform ${theme === 'black' ? 'rotate-0 scale-100 opacity-100' : 'rotate-90 scale-50 opacity-0'}`}>
-                <StarIcon className="w-5 h-5 text-yellow-300" />
-              </span>
+              <ThemeIcon className="w-5 h-5 transition-all duration-300 transform scale-100 rotate-0" />
             </button>
           </div>
         </div>

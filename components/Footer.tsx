@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -13,7 +12,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-transparent mt-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="border-t border-[var(--border-card)] py-12 flex flex-col items-center text-center">
+        <div className="border-t border-[var(--border-main)] py-12 flex flex-col items-center text-center">
           
           <a href="https://affiliatemarketingforsuccess.com" target="_blank" rel="noopener noreferrer" className="mb-6 block">
             <img 
@@ -23,12 +22,12 @@ const Footer: React.FC = () => {
             />
           </a>
           
-          <p className="max-w-lg text-base text-[var(--text-muted)] mb-6">
+          <p className="max-w-lg text-base text-[var(--text-muted)] mb-6 transition-colors duration-500">
             Nexus AI is an unfair advantage created by Alexios Papaioannou, owner of <a href="https://affiliatemarketingforsuccess.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-[var(--text-link)] hover:text-[var(--text-link-hover)] transition-colors hover:underline">affiliatemarketingforsuccess.com</a>
           </p>
           
           <nav className="mb-8" aria-label="Footer navigation">
-            <p className="text-sm text-[var(--text-main)] mb-3">Learn more from the playbook:</p>
+            <p className="text-sm text-[var(--text-main)] mb-3 transition-colors duration-500">Learn more from the playbook:</p>
             <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
               {footerLinks.map((link) => (
                 <li key={link.name}>
@@ -45,7 +44,7 @@ const Footer: React.FC = () => {
             </ul>
           </nav>
 
-          <p className="text-sm text-[var(--text-muted)]">&copy; {new Date().getFullYear()} Nexus AI. All rights reserved.</p>
+          <p className="text-sm text-[var(--text-muted)] transition-colors duration-500">&copy; {new Date().getFullYear()} Nexus AI. All rights reserved.</p>
         </div>
       </div>
     </footer>
