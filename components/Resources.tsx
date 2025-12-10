@@ -1,62 +1,25 @@
-import React, { useRef, useEffect } from 'react';
+
+import React from 'react';
 import { RESOURCES } from '../constants';
-import type { Resource } from '../types';
-
-const ResourceCard: React.FC<{ resource: Resource }> = ({ resource }) => {
-  const cardRef = useRef<HTMLAnchorElement>(null);
-
-  useEffect(() => {
-    const card = cardRef.current;
-    if (!card) return;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      card.style.setProperty('--glow-x', `${x}px`);
-      card.style.setProperty('--glow-y', `${y}px`);
-    };
-
-    card.addEventListener('mousemove', handleMouseMove);
-    return () => card.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
-  return (
-    <a 
-      ref={cardRef}
-      href={resource.url} 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="group aurora-card block rounded-2xl h-full"
-    >
-      <div className="border-glow" />
-      <div className="relative flex flex-col h-full rounded-2xl backdrop-blur-variable p-6">
-        <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--bg-button-secondary)] border border-[var(--border-button-secondary)] text-[var(--text-link)]">
-          {resource.icon}
-        </div>
-        <h3 className="mt-5 text-lg font-semibold text-[var(--text-heading)] transition-colors duration-500">{resource.title}</h3>
-        <p className="mt-2 text-sm text-[var(--text-muted)] flex-grow transition-colors duration-500">{resource.description}</p>
-        <span className="mt-6 text-sm font-medium text-[var(--text-link)] group-hover:text-[var(--text-link-hover)] transition-colors">
-          Read The Playbook <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
-        </span>
-      </div>
-    </a>
-  );
-};
 
 const Resources: React.FC = () => {
   return (
-    <section id="resources" className="py-24 sm:py-32 section-animate">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl transition-colors duration-500">From the Playbook</h2>
-          <p className="mt-4 text-lg text-[var(--text-muted)] transition-colors duration-500">
-            The tools are the weapons. This is the strategic intelligence you need to wield them.
-          </p>
+    <section id="resources" className="py-24 border-t border-[var(--border-subtle)]">
+      <div className="max-w-[1400px] mx-auto px-4">
+        <div className="flex justify-between items-end mb-12">
+            <h2 className="text-3xl font-black text-white uppercase tracking-tighter">Documentation</h2>
+            <div className="text-xs font-mono text-[var(--accent-core)]">[READ_ONLY]</div>
         </div>
-        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {RESOURCES.map((resource) => (
-            <ResourceCard key={resource.id} resource={resource} />
+            <a key={resource.id} href={resource.url} target="_blank" rel="noopener noreferrer" className="group block">
+                <div className="p-6 bg-[var(--bg-panel)] border border-[var(--border-subtle)] group-hover:border-[var(--accent-core)] transition-colors h-full flex flex-col">
+                    <div className="text-[var(--accent-dim)] group-hover:text-[var(--accent-core)] mb-4 transition-colors">{resource.icon}</div>
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[var(--accent-core)] transition-colors">{resource.title}</h3>
+                    <p className="text-xs text-[var(--text-secondary)] font-mono flex-grow">{resource.description}</p>
+                    <div className="mt-6 text-[10px] text-[var(--text-tertiary)] uppercase tracking-widest group-hover:text-white transition-colors">Read File -&gt;</div>
+                </div>
+            </a>
           ))}
         </div>
       </div>

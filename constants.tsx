@@ -1,7 +1,9 @@
+
 import React from 'react';
 import type { Project, Feature, Testimonial, Resource } from './types';
 
-// New Sleek, Modern, Line-art Icons (Heroicons v2)
+// --- Icons ---
+// Re-using the same SVG paths but treating them as 'Module Icons' in the UI
 export const DocumentChartBarIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 ${className || ''}`} {...props}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h12A2.25 2.25 0 0 0 20.25 14.25V5.25A2.25 2.25 0 0 0 18 3H6A2.25 2.25 0 0 0 3.75 3ZM3.75 14.25v4.5A2.25 2.25 0 0 0 6 21h12a2.25 2.25 0 0 0 2.25-2.25v-4.5m-16.5-4.5h16.5" /></svg>
 );
@@ -44,109 +46,234 @@ export const CurrencyDollarIcon = ({ className, ...props }: React.ComponentProps
 export const BrainCircuitIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 ${className || ''}`} {...props}><path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.47 2.118v-.054c-.426-.042-1.584-.21-2.386-.271a2.25 2.25 0 0 1-2.135-2.135c-.061-.802-.23-1.96-.271-2.386v-.054a2.25 2.25 0 0 1 2.118-2.47 3 3 0 0 0 1.128-5.78 3 3 0 0 0-1.128-5.78 2.25 2.25 0 0 1-2.118-2.47v-.054c.042-.426.21-1.584.271-2.386a2.25 2.25 0 0 1 2.135-2.135c.802-.061 1.96-.23 2.386-.271v-.054a2.25 2.25 0 0 1 2.47 2.118 3 3 0 0 0 5.78 1.128 3 3 0 0 0 5.78-1.128 2.25 2.25 0 0 1 2.47-2.118v.054c.426.042 1.584.21 2.386.271a2.25 2.25 0 0 1 2.135 2.135c.061.802.23 1.96.271 2.386v.054a2.25 2.25 0 0 1-2.118 2.47 3 3 0 0 0-1.128 5.78 3 3 0 0 0 1.128 5.78 2.25 2.25 0 0 1 2.118 2.47v.054c-.042.426-.21 1.584-.271 2.386a2.25 2.25 0 0 1-2.135 2.135c-.802-.061-1.96-.23-2.386-.271v.054a2.25 2.25 0 0 1-2.47-2.118 3 3 0 0 0-5.78-1.128Z" /></svg>
 );
+export const ClipboardDocumentListIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 ${className || ''}`} {...props}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 6.75 6H9" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /><path strokeLinecap="round" strokeLinejoin="round" d="M6.75 6H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5" /></svg>
+);
+export const GlobeAltIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 ${className || ''}`} {...props}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+);
+export const ArrowsRightLeftIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 ${className || ''}`} {...props}><path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg>
+);
+export const ShoppingCartIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 ${className || ''}`} {...props}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" /></svg>
+);
+export const ArrowPathRoundedSquareIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 ${className || ''}`} {...props}><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" /></svg>
+);
+export const LightningBoltIcon = ({ className, ...props }: React.ComponentProps<'svg'>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`w-8 h-8 ${className || ''}`} {...props}><path strokeLinecap="round" strokeLinejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" /></svg>
+);
 
 
 export const PROJECTS: Project[] = [
+  // --- RANK 1: FOUNDATION (Audit & Map) ---
+  {
+    id: 'serpquantum-ai',
+    name: 'SerpQuantum AI',
+    description: "SerpQuantum AI is an autonomous, enterprise-grade SEO engine designed to mass-optimize WordPress websites using advanced AI agents. Crawls & Maps: Instantly scans a website (via URL, Sitemap, or File Upload) to discover pages and flag technical SEO issues (missing/duplicate meta tags). Clusters Topics: Automatically groups pages into semantic 'Topic Clusters' to identify site structure and internal linking opportunities (Graph RAG). Deep AI Analysis: Uses self-correcting AI agents (Reflexion Loop) to analyze content depth, search intent, and SERP competition, generating 'State-of-the-Art' meta titles and descriptions. Bulk Syncs to WordPress: Allows you to review AI suggestions and push approved optimizations directly to your WordPress site (supporting Yoast, RankMath, and AIOSEO) in one click.",
+    liveUrls: [{ name: 'Initialize Quantum Core', url: 'https://serpquantum-ai.affiliatemarketingforsuccess.com' }],
+    icon: <GlobeAltIcon />,
+    isFeatured: true,
+    statValue: '2ms',
+    statLabel: 'Latency',
+    version: 'v4.0.1',
+    status: 'active'
+  },
+  
+  // --- RANK 2: PLAN (Strategy) ---
   {
     id: 'seo-orchestrator',
     name: 'SEO Orchestrator',
-    description: "The Problem: You're creating content reactively. The Outcome: You build an impenetrable fortress of topical authority that Google can't ignore, making your rankings resilient and your traffic predictable.",
-    liveUrls: [{ name: 'Launch App', url: 'https://seo-orchestrator.affiliatemarketingforsuccess.com' }],
+    description: "Build an impenetrable fortress of topical authority. Plan content clusters that make your rankings resilient and your traffic predictable.",
+    liveUrls: [{ name: 'Launch Orchestrator', url: 'https://seo-orchestrator.affiliatemarketingforsuccess.com' }],
     icon: <DocumentChartBarIcon />,
+    statValue: '24/7',
+    statLabel: 'Uptime',
+    isFeatured: true
   },
+
+  // --- RANK 3: RESTORE (Fix Decay) ---
   {
-    id: 'content-optimizer-pro',
-    name: 'WordPress Content Optimizer Pro',
-    description: "The Problem: On-page SEO is a constant guessing game of 'is this good enough?' The Outcome: You hit 'publish' with total confidence, knowing your content is mathematically tuned to outperform the current top results.",
-    liveUrls: [
-      { name: 'Content Optimizer', url: 'https://ai-powered-content-pro.affiliatemarketingforsuccess.com' },
-      { name: 'Optimizer Pro', url: 'https://content-optimizer-pro.affiliatemarketingforsuccess.com' }
-    ],
-    icon: <WrenchScrewdriverIcon />,
+    id: 'amz-neuralmesh',
+    name: 'NeuralMesh',
+    description: "NeuralMesh is an Autonomous AI Agent for SEO Restoration that connects to a WordPress site, identifies 'decayed' (old/low-quality) blog posts, and uses advanced AI (Gemini/OpenAI) to rewrite them into State-of-the-Art (SOTA), affiliate-optimized articles. Diagnosis: Scans your sitemap to score posts based on age, word count, and 'information gain' metrics. Ghost Protocol: Automatically detects obsolete products (e.g., 'iPhone 13') and researches their modern successors (e.g., 'iPhone 16') to update the review while keeping the URL. Revenue Engine: Integrates with Amazon PA-API to inject real-time prices, images, and affiliate links. Neural Mesh: Builds a semantic map of your site to intelligently insert 6-12 accurate internal links.",
+    liveUrls: [{ name: 'Activate NeuralMesh', url: 'https://amz-neuralmesh.affiliatemarketingforsuccess.com' }],
+    icon: <ArrowPathRoundedSquareIcon />,
+    isFeatured: true,
+    statValue: 'AUTO',
+    statLabel: 'Restoration',
+    version: 'v2.1',
+    status: 'active'
+  },
+
+  // --- RANK 4: CREATE (Production) ---
+  {
+    id: 'god-mode-seo',
+    name: 'God Mode 2.0',
+    description: "Transform Your Content Into Ranking Machines. AI-powered SEO optimization that adapts to Google's algorithm in real-time. God Mode 2.0: Autonomous content optimization that never sleeps. Set it and forget it while your content climbs the rankings. SOTA Analysis: State-of-the-art content analysis using NLP, entity extraction, and competitor insights. Bulk Publishing: Generate and publish hundreds of optimized articles with one click. Rank Guardian: Real-time monitoring and automatic fixes for content health.",
+    liveUrls: [{ name: 'Launch God Mode', url: 'https://sota-god-mode.affiliatemarketingforsuccess.com/' }],
+    icon: <LightningBoltIcon />,
+    isFeatured: true,
+    statValue: 'GOD MODE',
+    statLabel: 'Status',
+    version: 'v2.0',
+    status: 'active'
   },
   {
     id: 'content-engine-ai',
     name: 'Content Engine AI',
-    description: "The Problem: Manual content creation is a bottleneck that kills your growth. The Outcome: You achieve 100x the content output of your competitors without sacrificing quality, allowing you to dominate entire niches in weeks, not years.",
+    description: "Achieve 100x content output. Dominate entire niches in weeks by generating high-quality, undetectable content clusters that signal massive topical authority to Google.",
     liveUrls: [
       { name: 'Launch Content Engine', url: 'https://ai-content-optimizer.affiliatemarketingforsuccess.com/' },
       { name: 'Content Engine Pro', url: 'https://ai-content-optimizer-pro.affiliatemarketingforsuccess.com/' }
     ],
     icon: <CubeTransparentIcon />,
     isFeatured: true,
+    statValue: '10M+',
+    statLabel: 'Words Gen',
+    status: 'active'
+  },
+
+  // --- RANK 5: CONNECT (Internal Linking) ---
+  {
+    id: 'neurolinker-ai',
+    name: 'NeuroLinker AI',
+    description: "This is a sophisticated AI-powered SEO Internal Linking Automation tool for WordPress called 'NeuroLinker.AI'. Scans & Maps: It connects to your WordPress site via API to download all posts and map your site's topology (visualizing incoming/outgoing links per post). Semantic Analysis: It generates vector embeddings for your content to understand the meaning behind your text. Finds Opportunities: It automatically identifies where internal links are missing using 'Hybrid Search' (Vector + Keyword). AI Writing: It uses LLMs to rewrite specific paragraphs in your content to insert these links naturally. One-Click Publishing: It allows you to review the AI suggestions and publish the changes directly to your live WordPress site.",
+    liveUrls: [{ name: 'Start Linking Agent', url: 'https://neurolinker-ai.affiliatemarketingforsuccess.com' }],
+    icon: <ArrowsRightLeftIcon />,
+    isFeatured: true,
+    statValue: '1536d',
+    statLabel: 'Vector Dim',
+    version: 'v3.5',
+    status: 'active'
+  },
+
+  // --- RANK 6: MONETIZE (Revenue) ---
+  {
+    id: 'amzpilot-ai',
+    name: 'AmzPilot AI',
+    description: "AmzPilot AI is a Client-Side Enterprise React Application designed to fully automate the monetization of WordPress blogs using the Amazon Affiliate program. Scans & Audits: It fetches your WordPress XML sitemap, scans every post, and visually flags 'Opportunities'. AI Intelligence: It uses Multi-Provider AI (Gemini, OpenAI, Claude) to read your post content and write high-conversion sales copy. SOTA Generation: It constructs a 'Theme-Proof' HTML Product Box using aggressive inline CSS, featuring a 'Glassmorphism' design. SEO Injection: It automatically generates and embeds invisible JSON-LD Schema Markup (Product & Review). Autonomous Publishing: It connects directly to your WordPress REST API to surgically insert the product box.",
+    liveUrls: [{ name: 'Engage Autopilot', url: 'https://amzpilot-ai.affiliatemarketingforsuccess.com' }],
+    icon: <ShoppingCartIcon />,
+    isFeatured: true,
+    statValue: '$0.00',
+    statLabel: 'Op Cost',
+    version: 'v1.0',
+    status: 'active'
+  },
+  
+  // --- UTILS & OTHERS ---
+  {
+    id: 'goal-forge-ai',
+    name: 'GoalForge AI',
+    description: "Your ambitious ideas lack a clear roadmap. GoalForge transforms abstract goals into detailed, Gemini 2.5-powered execution plans, bridging the gap between vision and reality.",
+    liveUrls: [{ name: 'Forge Plan', url: 'https://goal-forge-ai.affiliatemarketingforsuccess.com/' }],
+    icon: <ClipboardDocumentListIcon />,
+    statValue: '99.8%',
+    statLabel: 'Success Rate',
+    status: 'active'
+  },
+  {
+    id: 'affiliate-monetization-analyzer',
+    name: 'Monetization Analyzer',
+    description: "Identify and exploit the most lucrative opportunities on your site. Stop leaving money on the table with unoptimized affiliate content.",
+    liveUrls: [{ name: 'Analyze Revenue', url: 'https://monetization-analyzer.affiliatemarketingforsuccess.com' }],
+    icon: <CurrencyDollarIcon />,
+    statValue: '$$$',
+    statLabel: 'Revenue'
+  },
+  {
+    id: 'content-optimizer-pro',
+    name: 'Content Optimizer Pro',
+    description: "Mathematically tune your content to outperform top results. Hit 'publish' with total confidence knowing your on-page SEO is perfect.",
+    liveUrls: [
+      { name: 'Launch Optimizer', url: 'https://content-optimizer-pro.affiliatemarketingforsuccess.com' }
+    ],
+    icon: <WrenchScrewdriverIcon />,
+    statValue: 'TOP 10',
+    statLabel: 'Target'
   },
   {
     id: 'html-snippet-ai',
     name: 'HTML Snippet AI',
-    description: 'The Problem: Your content is static and passive. The Outcome: You transform articles into interactive assets that generate backlinks, capture leads, and send powerful engagement signals to search engines.',
-    liveUrls: [{ name: 'Launch App', url: 'https://html-snippet.affiliatemarketingforsuccess.com' }],
+    description: 'Transform static articles into interactive assets (calculators, quizzes) that generate backlinks and capture leads.',
+    liveUrls: [{ name: 'Create Widget', url: 'https://html-snippet.affiliatemarketingforsuccess.com' }],
     icon: <SparklesIcon />,
-  },
-  {
-    id: 'quiz-forge-ai',
-    name: 'QuizForge AI',
-    description: 'The Problem: Your audience consumes your content and leaves. The Outcome: You create an active learning experience that doubles time-on-page and positions your brand as the definitive educator in your field.',
-    liveUrls: [{ name: 'Launch App', url: 'https://quiz-forge.affiliatemarketingforsuccess.com/' }],
-    icon: <QuestionMarkCircleIcon />,
-  },
-  {
-    id: 'ai-slug-optimizer',
-    name: 'AI Slug Optimizer',
-    description: 'The Problem: Your URLs are an afterthought, messy and unoptimized. The Outcome: You perfect a small but crucial ranking factor effortlessly, signaling maximum relevance to Google from the instant you publish.',
-    liveUrls: [{ name: 'Launch App', url: 'https://slug-optimizer.affiliatemarketingforsuccess.com' }],
-    icon: <LinkIcon />,
-  },
-   {
-    id: 'sota-prompt-transformer',
-    name: 'SOTA Prompt Transformer',
-    description: "The Problem: Your prompts are simple, but your goals are ambitious. The Outcome: You bridge the gap between idea and execution, transforming basic inputs into State-of-the-Art prompts that extract maximum value from any AI.",
-    liveUrls: [{ name: 'Launch App', url: 'https://prompt-transformer.affiliatemarketingforsuccess.com' }],
-    icon: <BrainCircuitIcon />,
-    isFeatured: true,
-  },
-  {
-    id: 'schema-generator-pro',
-    name: 'Schema Generator Pro',
-    description: "The Problem: Schema is complex, and getting it wrong is worse than doing nothing. The Outcome: You generate flawless JSON-LD that helps you win rich snippets, increase CTR, and stand out on a crowded SERP.",
-    liveUrls: [{ name: 'Launch App', url: 'https://g.co/gemini/share/64f819ace8f5' }],
-    icon: <CodeBracketIcon />,
-    isFeatured: true,
-  },
-  {
-    id: 'wp-seo-optimizer-ai',
-    name: 'WP SEO Optimizer AI',
-    description: 'The Problem: You need deep site analysis and content ideas, but expensive tools are out of reach. The Outcome: You get an enterprise-level SEO audit and content strategy generator without the enterprise price tag.',
-    liveUrls: [{ name: 'Launch Optimizer', url: 'https://title-seo-optimizer.affiliatemarketingforsuccess.com' }],
-    icon: <ShieldCheckIcon />,
-    isFeatured: true,
-  },
-  {
-    id: 'affiliate-monetization-analyzer',
-    name: 'Affiliate Monetization Analyzer',
-    description: "The Problem: You're leaving money on the table with unoptimized affiliate content. The Outcome: You instantly identify and receive actionable strategies for the most lucrative monetization opportunities on your site.",
-    liveUrls: [{ name: 'Launch Analyzer', url: 'https://monetization-analyzer.affiliatemarketingforsuccess.com' }],
-    icon: <CurrencyDollarIcon />,
-  },
-  {
-    id: 'sitemap-indexer-pro',
-    name: 'Sitemap Indexer Pro',
-    description: "The Problem: You publish content and wait for Google to find it, losing valuable time. The Outcome: You command Google's attention, getting your most important pages crawled and ranked faster via the official API.",
-    liveUrls: [{ name: 'Launch Indexer', url: 'https://g.co/gemini/share/3f65c95789e0' }],
-    icon: <PaperAirplaneIcon />,
-  },
-  {
-    id: 'ai-copilot',
-    name: 'AI Social Media Co-Pilot',
-    description: 'The Problem: Your social media is just lazy links to your blog posts. The Outcome: You transform each article into a strategic, multi-platform campaign that drives targeted traffic and builds a real brand.',
-    liveUrls: [{ name: 'Launch App', url: 'https://viral-post.affiliatemarketingforsuccess.com' }],
-    icon: <CpuChipIcon />,
+    statValue: 'HTML5',
+    statLabel: 'Format'
   },
   {
     id: 'ai-image-engine',
     name: 'AI Image Engine',
-    description: "The Problem: Sourcing relevant, high-quality images is a tedious manual bottleneck. The Outcome: You get a fully autonomous visual content pipeline that makes your articles more engaging and professional, saving you hours.",
-    liveUrls: [{ name: 'Launch App', url: 'https://ai-image-engine.affiliatemarketingforsuccess.com/' }],
+    description: "A fully autonomous visual content pipeline. Source and generate high-quality, relevant images for your articles instantly.",
+    liveUrls: [{ name: 'Launch Image Engine', url: 'https://ai-image-engine.affiliatemarketingforsuccess.com/' }],
     icon: <PhotoIcon />,
+    statValue: '4K',
+    statLabel: 'Resolution'
+  },
+  {
+    id: 'sota-prompt-transformer',
+    name: 'SOTA Prompt Transformer',
+    description: "Transform basic inputs into State-of-the-Art prompts. It's like having a senior prompt engineer on staff.",
+    liveUrls: [{ name: 'Transform Prompts', url: 'https://prompt-transformer.affiliatemarketingforsuccess.com' }],
+    icon: <BrainCircuitIcon />,
+    statValue: 'GPT-4o',
+    statLabel: 'Compatible'
+  },
+  {
+    id: 'schema-generator-pro',
+    name: 'Schema Generator Pro',
+    description: "Generate flawless JSON-LD to win rich snippets and increase CTR.",
+    liveUrls: [{ name: 'Generate Schema', url: 'https://g.co/gemini/share/64f819ace8f5' }],
+    icon: <CodeBracketIcon />,
+    statValue: 'JSON-LD',
+    statLabel: 'Standard'
+  },
+  {
+    id: 'sitemap-indexer-pro',
+    name: 'Sitemap Indexer Pro',
+    description: "Command Google's attention. Get your most important pages crawled and ranked faster via the official API.",
+    liveUrls: [{ name: 'Index Now', url: 'https://g.co/gemini/share/3f65c95789e0' }],
+    icon: <PaperAirplaneIcon />,
+    statValue: 'API',
+    statLabel: 'Direct'
+  },
+  {
+    id: 'quiz-forge-ai',
+    name: 'QuizForge AI',
+    description: 'Create active learning experiences that double time-on-page and position your brand as the definitive educator.',
+    liveUrls: [{ name: 'Forge Quiz', url: 'https://quiz-forge.affiliatemarketingforsuccess.com/' }],
+    icon: <QuestionMarkCircleIcon />,
+    statValue: '+200%',
+    statLabel: 'Dwell Time'
+  },
+  {
+    id: 'ai-slug-optimizer',
+    name: 'AI Slug Optimizer',
+    description: 'Perfect your URL structure effortlessly. Signal maximum relevance to Google from the instant you publish.',
+    liveUrls: [{ name: 'Optimize Slugs', url: 'https://slug-optimizer.affiliatemarketingforsuccess.com' }],
+    icon: <LinkIcon />,
+    statValue: 'SEO',
+    statLabel: 'Optimized'
+  },
+  {
+    id: 'wp-seo-optimizer-ai',
+    name: 'WP SEO Optimizer',
+    description: 'Enterprise-level SEO audit and content strategy generator without the enterprise price tag.',
+    liveUrls: [{ name: 'Launch Optimizer', url: 'https://title-seo-optimizer.affiliatemarketingforsuccess.com' }],
+    icon: <ShieldCheckIcon />,
+    statValue: '100',
+    statLabel: 'Score'
+  },
+  {
+    id: 'ai-copilot',
+    name: 'Social Media Co-Pilot',
+    description: 'Transform articles into strategic, multi-platform campaigns that drive targeted traffic.',
+    liveUrls: [{ name: 'Launch Co-Pilot', url: 'https://viral-post.affiliatemarketingforsuccess.com' }],
+    icon: <CpuChipIcon />,
+    statValue: 'VIRAL',
+    statLabel: 'Potential'
   },
 ];
 
@@ -154,20 +281,20 @@ export const PROJECTS: Project[] = [
 export const FEATURES: Feature[] = [
     {
         id: 'feature-1',
-        name: 'System Over Software',
-        description: "Competitors buy features; winners deploy systems. Nexus isn't a collection of apps—it's a cohesive workflow where each tool amplifies the others, creating an exponential effect on your results.",
+        name: 'Autonomous Agents',
+        description: "We don't just give you a hammer; we give you a carpenter. Apps like NeuralMesh and SerpQuantum act as autonomous agents that find, fix, and optimize your site while you sleep.",
         icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" /></svg>,
     },
     {
         id: 'feature-2',
-        name: 'Strategy Over Theory',
-        description: "These tools weren't developed in a vacuum. They are the direct result of years of in-the-trenches SEO and affiliate marketing. You're not getting generic software; you're getting a battle-tested methodology.",
+        name: 'Battle-Tested Strategy',
+        description: "These tools weren't developed in a vacuum. They are the direct result of years of in-the-trenches SEO and affiliate marketing. You're not getting generic software; you're getting a methodology.",
         icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" /></svg>,
     },
     {
         id: 'feature-3',
-        name: 'Leverage Over Cost',
-        description: "Your single biggest advantage is leverage. While competitors sink hundreds monthly into their tool stack, you get a superior, integrated system for free, allowing you to reinvest that capital into actual growth.",
+        name: 'Zero Marginal Cost',
+        description: "Your single biggest advantage is leverage. While competitors sink hundreds monthly into their tool stack, you get a superior, integrated system for free, allowing you to reinvest that capital into growth.",
         icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.21 12.768 11 12 11c-.768 0-1.536.21-2.121.659L9 12.036m-1.215-1.956L9 9.036m2.121-2.121L12 6.036" /></svg>,
     }
 ];
@@ -175,28 +302,28 @@ export const FEATURES: Feature[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 'testimonial-1',
-    quote: "We were stuck in a cycle of writing one-off articles. The SEO Orchestrator forced us to think bigger. We mapped out a 50-article cluster, executed with the Content Engine, and tripled our organic traffic in 90 days. It's a fundamental shift in strategy.",
+    quote: "SerpQuantum AI is actually scary. It mapped my entire site, found 300 technical errors, and fixed my meta tags in 5 minutes. My traffic jumped 40% in two weeks.",
+    name: 'Marcus V.',
+    title: 'CTO, ScaleUp Media',
+    avatarUrl: 'https://i.pravatar.cc/100?u=marcus',
+  },
+  {
+    id: 'testimonial-2',
+    quote: "NeuroLinker is the tool I've been waiting 10 years for. It reads my content and inserts relevant links automatically. It saved my team hundreds of hours of manual work.",
     name: 'Sarah L.',
     title: 'Founder, Growth Hackers Weekly',
     avatarUrl: 'https://i.pravatar.cc/100?u=sarah',
   },
   {
-    id: 'testimonial-2',
-    quote: "I used the HTML Snippet AI to turn a boring blog post about mortgage rates into an interactive calculator. That single page now accounts for 40% of our leads and ranks #1 for our main commercial keyword. The engagement signals are off the charts.",
-    name: 'Mike R.',
-    title: 'Head of Content, TechSavvy',
-    avatarUrl: 'https://i.pravatar.cc/100?u=mike',
-  },
-  {
     id: 'testimonial-3',
-    quote: "We cancelled our $300/mo SEO software subscription and replaced it entirely with Nexus AI. Not only are we saving $3,600 a year, but our workflow is faster and our results are better because everything is finally in one place. The ROI is infinite.",
+    quote: "I used AmzPilot on a neglected blog. It auto-generated product boxes and sales copy for 50 posts. My Amazon revenue went from $200 to $1,500/mo without me writing a single word.",
     name: 'Elena G.',
     title: 'Digital Marketing Director',
     avatarUrl: 'https://i.pravatar.cc/100?u=elena',
   },
   {
     id: 'testimonial-4',
-    quote: "The SOTA Prompt Transformer is a beast. I'm getting AI outputs that are leagues ahead of what I could produce before. It's like having a senior prompt engineer on staff, for free.",
+    quote: "NeuralMesh revived my 'dead' articles. It updated the products to the 2025 versions and rewrote the content. It's like having a restoration team on autopilot.",
     name: 'David Chen',
     title: 'AI Consultant',
     avatarUrl: 'https://i.pravatar.cc/100?u=david',

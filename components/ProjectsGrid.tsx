@@ -1,78 +1,83 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { PROJECTS } from '../constants';
 import type { Project } from '../types';
 
-const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const card = cardRef.current;
-    if (!card) return;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      
-      card.style.setProperty('--glow-x', `${x}px`);
-      card.style.setProperty('--glow-y', `${y}px`);
-    };
-
-    card.addEventListener('mousemove', handleMouseMove);
-    return () => card.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
+const BentoCard: React.FC<{ project: Project; className?: string }> = ({ project, className }) => {
   return (
-    <div 
-        ref={cardRef} 
-        id={project.id}
-        className="aurora-card h-full rounded-2xl"
-    >
-      <div className="border-glow" />
-      <div className="p-8 h-full flex flex-col items-center text-center backdrop-blur-variable rounded-2xl">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full text-[var(--text-icon)] transition-colors duration-300 shadow-inner" style={{ background: 'var(--bg-icon-wrapper)'}}>
-            {React.cloneElement(project.icon, { className: 'w-7 h-7' })}
-          </div>
-          <h3 className="mt-6 text-lg font-semibold text-[var(--text-heading)] transition-colors duration-500">{project.name}</h3>
-          <p className="mt-2 text-sm text-[var(--text-muted)] flex-grow transition-colors duration-500">{project.description}</p>
-          
-          {project.liveUrls && project.liveUrls.length > 0 && (
-            <div className="mt-6 w-full flex flex-col items-center gap-3">
-              {project.liveUrls.map((link) => (
-                <a 
-                  key={link.url}
-                  href={link.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center rounded-md bg-[var(--bg-button-secondary)] px-4 py-2 text-sm font-medium text-[var(--text-link)] shadow-sm ring-1 ring-inset ring-[var(--border-button-secondary)] transition-all duration-200 hover:bg-[var(--bg-button-secondary-hover)] hover:text-[var(--text-link-hover)] hover:ring-[var(--accent-secondary)]"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
-          )}
-      </div>
+    <div className={`bento-card group ${className || ''}`}>
+       {/* Background Glow on Hover */}
+       <div className="absolute inset-0 bg-gradient-to-br from-nexus-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+       
+       <div className="relative z-10 flex flex-col h-full justify-between">
+           <div>
+               <div className="flex justify-between items-start mb-6">
+                   <div className="p-2 rounded-lg bg-white/5 border border-white/10 text-white group-hover:bg-nexus-accent group-hover:text-black transition-colors duration-300">
+                       {React.cloneElement(project.icon, { className: 'w-6 h-6' })}
+                   </div>
+                   {project.statValue && (
+                       <div className="text-right">
+                           <div className="font-mono text-xs text-nexus-accent">{project.statLabel}</div>
+                           <div className="font-bold text-white">{project.statValue}</div>
+                       </div>
+                   )}
+               </div>
+               
+               <h3 className="text-2xl font-bold text-white mb-2 tracking-tight">{project.name}</h3>
+               <p className="text-nexus-muted text-sm leading-relaxed mb-6">
+                   {project.description}
+               </p>
+           </div>
+
+           <div>
+              {project.liveUrls && (
+                <div className="flex flex-wrap gap-2">
+                    {project.liveUrls.map(url => (
+                        <a 
+                            key={url.url}
+                            href={url.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-black border border-nexus-border rounded text-[10px] font-mono uppercase tracking-widest text-white hover:border-nexus-accent hover:text-nexus-accent transition-all"
+                        >
+                            Launch_App
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                        </a>
+                    ))}
+                </div>
+              )}
+           </div>
+       </div>
     </div>
   );
 };
 
 const ProjectsGrid: React.FC = () => {
+  // Re-organize projects for Bento Layout visuals
+  // Highlighting the "Big 4" (Quantum, Mesh, Mode, Pilot)
+  
   return (
-    <section id="tools" className="py-24 sm:py-32 section-animate">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[var(--text-heading)] sm:text-4xl transition-colors duration-500">The Unfair Advantage Arsenal</h2>
-          <p className="mt-4 text-lg text-[var(--text-muted)] transition-colors duration-500">
-            Each tool is a force multiplier. Together, they create an unstoppable system.
-          </p>
-        </div>
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {PROJECTS.map((project) => (
-            <div key={project.id} className={`${project.isFeatured ? 'lg:col-span-2' : ''}`}>
-              <ProjectCard project={project} />
-            </div>
-          ))}
-        </div>
+    <section id="tools" className="py-24 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mb-12 border-b border-nexus-border pb-8 flex flex-col md:flex-row justify-between items-end">
+          <h2 className="display-heading text-4xl md:text-6xl text-white">
+            MODULES
+          </h2>
+          <div className="text-right font-mono text-xs text-nexus-muted">
+            <p>SYSTEM STATUS: OPTIMAL</p>
+            <p>AVAILABLE AGENTS: {PROJECTS.length}</p>
+          </div>
+      </div>
+
+      <div className="bento-grid">
+        {PROJECTS.map((project, idx) => {
+            // Logic to make certain cards span 2 columns for visual interest
+            // e.g. First item, and items at index 3, 6
+            const isWide = idx === 0 || idx === 3 || idx === 6; 
+            const spanClass = isWide ? 'bento-span-2' : '';
+            
+            return (
+                <BentoCard key={project.id} project={project} className={spanClass} />
+            );
+        })}
       </div>
     </section>
   );

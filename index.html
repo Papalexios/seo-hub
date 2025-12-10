@@ -4,362 +4,169 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nexus AI - Your Unfair Advantage</title>
+    <title>Nexus AI | Enterprise SEO Autonomous Agents</title>
+    <meta name="description" content="A central hub for a suite of high-quality AI applications designed to boost your website's organic traffic, topical authority, and overall SEO performance via Generative Engine Optimization." />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nexus AI - DOMINATE Search with Generative AI" />
+    <meta property="og:description" content="Stop using scattered tools. Deploy a cohesive AI system for SEO domination." />
+    <meta property="og:image" content="https://affiliatemarketingforsuccess.com/wp-content/uploads/2023/03/cropped-Affiliate-Marketing-for-Success-Logo-Edited.png" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Nexus AI",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Enterprise autonomous agents for SEO, content creation, and affiliate monetization.",
+        "author": {
+          "@type": "Person",
+          "name": "Alexios Papaioannou",
+          "url": "https://affiliatemarketingforsuccess.com"
+        }
+      }
+    ]
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              display: ['Inter', 'sans-serif'], // For massive headings
+            },
+            colors: {
+              nexus: {
+                black: '#080808',
+                panel: '#111111',
+                border: '#222222',
+                accent: '#FF4400', // International Orange
+                text: '#EEEEEE',
+                muted: '#888888'
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
     <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
       
-      /* New CSS Variable-based Theming System */
       :root {
-        --bg-main: #FFFFFF;
-        --bg-soft: #F9FAFB;
-        --bg-header: rgba(255, 255, 255, 0.5);
-
-        --text-heading: #111827; /* gray-900 */
-        --text-main: #374151; /* gray-700 */
-        --text-muted: #6B7280; /* gray-500 */
-        --text-link: #6366F1; /* indigo-500 */
-        --text-link-hover: #4F46E5; /* indigo-600 */
-        --text-icon: #8B5CF6;
-
-        --border-main: #E5E7EB; /* gray-200 */
-        --border-card: rgba(0, 0, 0, 0.05);
-        --border-button-secondary: rgba(0, 0, 0, 0.1);
-
-        --accent-primary: #8B5CF6; /* purple-500 */
-        --accent-secondary: #22D3EE; /* cyan-400 */
-        
-        --bg-card: rgba(255, 255, 255, 0.6);
-        --card-blur: 12px;
-        --card-glow-border: rgba(139, 92, 246, 0.3);
-        --card-glow-aurora: rgba(139, 92, 246, 0.1);
-        --bg-icon-wrapper: rgba(139, 92, 246, 0.1);
-
-        --bg-button-secondary: rgba(255, 255, 255, 0.5);
-        --bg-button-secondary-hover: rgba(245, 245, 255, 0.9);
-        
-        --risk-reversal-glow: 0.15;
-        --quote-icon-color: #D1D5DB; /* gray-300 */
-      }
-
-      html.dark {
-        --bg-main: #0A0F1F;
-        --bg-soft: #111729;
-        --bg-header: rgba(10, 15, 31, 0.5);
-
-        --text-heading: #F9FAFB; /* gray-50 */
-        --text-main: #D1D5DB; /* gray-300 */
-        --text-muted: #9CA3AF; /* gray-400 */
-        --text-link: #A78BFA; /* purple-400 */
-        --text-link-hover: #C4B5FD; /* purple-300 */
-        --text-icon: #67E8F9; /* cyan-300 */
-        
-        --border-main: rgba(255, 255, 255, 0.1);
-        --border-card: rgba(255, 255, 255, 0.08);
-        --border-button-secondary: rgba(255, 255, 255, 0.1);
-
-        --accent-primary: #A78BFA; /* purple-400 */
-        --accent-secondary: #67E8F9; /* cyan-300 */
-        
-        --bg-card: rgba(17, 23, 41, 0.6);
-        --card-blur: 16px;
-        --card-glow-border: rgba(167, 139, 250, 0.5);
-        --card-glow-aurora: rgba(167, 139, 250, 0.1);
-        --bg-icon-wrapper: rgba(167, 139, 250, 0.1);
-
-        --bg-button-secondary: rgba(255, 255, 255, 0.03);
-        --bg-button-secondary-hover: rgba(255, 255, 255, 0.07);
-        
-        --risk-reversal-glow: 0.25;
-        --quote-icon-color: #4B5563; /* gray-600 */
-      }
-      
-      html.black {
-        --bg-main: #000000;
-        --bg-soft: #111111;
-        --bg-header: rgba(0, 0, 0, 0.5);
-        --text-muted: #A1A1AA; /* zinc-400 */
-        --border-main: rgba(255, 255, 255, 0.15);
-        --border-card: rgba(255, 255, 255, 0.1);
-        --card-glow-aurora: rgba(167, 139, 250, 0.15);
-        --bg-card: rgba(18, 18, 18, 0.7);
-        --risk-reversal-glow: 0.3;
+        --bg-main: #050505;
+        --bg-card: #0A0A0A;
+        --border-color: rgba(255, 255, 255, 0.08);
+        --accent: #FF4400;
+        --text-main: #EDEDED;
+        --text-muted: #737373;
       }
 
       body {
         background-color: var(--bg-main);
         color: var(--text-main);
-        transition: background-color 0.5s ease;
-      }
-      .backdrop-blur-variable {
-        backdrop-filter: blur(var(--card-blur));
-        -webkit-backdrop-filter: blur(var(--card-blur));
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
       }
 
-      /* Background Mesh Gradient */
-      #background-mesh {
+      /* Noise Texture Overlay */
+      .noise-overlay {
         position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        z-index: -20;
-        opacity: 0.6;
-        --gradient-color-1: var(--accent-primary);
-        --gradient-color-2: var(--accent-secondary);
-        --gradient-color-3: #EC4899;
-        --gradient-color-4: #F59E0B;
-        background:
-          radial-gradient(at 20% 80%, var(--gradient-color-1) 0px, transparent 50%),
-          radial-gradient(at 80% 10%, var(--gradient-color-2) 0px, transparent 50%),
-          radial-gradient(at 90% 90%, var(--gradient-color-3) 0px, transparent 50%),
-          radial-gradient(at 30% 20%, var(--gradient-color-4) 0px, transparent 50%);
-        animation: gradient-flow 30s ease-in-out infinite;
-        transition: opacity 0.5s ease;
-      }
-      html.dark #background-mesh { opacity: 0.2; }
-      html.black #background-mesh { opacity: 0.25; }
-
-      @keyframes gradient-flow {
-        0%{ background-position: 0% 50%, 100% 50%, 0% 0%, 100% 100%; }
-        50%{ background-position: 100% 50%, 0% 50%, 100% 100%, 0% 0%; }
-        100%{ background-position: 0% 50%, 100% 50%, 0% 0%, 100% 100%; }
+        top: 0; left: 0; width: 100%; height: 100%;
+        pointer-events: none;
+        z-index: 50;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
       }
 
-      /* Hero Title Animation */
-      @keyframes animated-text-gradient {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
+      /* Bento Grid Utilities */
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
       }
-      .animate-gradient {
-        background-size: 200% auto;
-        animation: animated-text-gradient 8s linear infinite;
+      @media (min-width: 768px) {
+        .bento-grid {
+          grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: minmax(200px, auto);
+        }
       }
-      
-      /* Scroll Animations */
-      @keyframes fade-in-up {
-        from { opacity: 0; transform: translateY(30px) scale(0.98); }
-        to { opacity: 1; transform: translateY(0) scale(1); }
-      }
-      .section-animate {
-        opacity: 0;
-        animation: fade-in-up 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
-        animation-timeline: view();
-        animation-range-start: entry 10%;
-        animation-range-end: cover 30%;
-      }
-      
-      /* New Card "Aurora" Styles */
-      .aurora-card {
-        --glow-x: 50%;
-        --glow-y: 50%;
-        --glow-opacity: 0;
+
+      .bento-card {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
         position: relative;
-        background: var(--bg-card);
-        border: 1px solid var(--border-card);
-        transition: background 0.3s ease, border 0.3s ease, transform 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
         overflow: hidden;
       }
-      .aurora-card::before { /* Aurora Glow Effect */
-        content: "";
-        position: absolute;
-        left: 0; top: 0;
-        width: 100%; height: 100%;
-        border-radius: inherit;
-        background: radial-gradient(
-          circle 300px at var(--glow-x) var(--glow-y),
-          var(--card-glow-aurora),
-          transparent 80%
-        );
-        opacity: var(--glow-opacity);
-        transition: opacity 0.4s ease;
-        pointer-events: none;
-        z-index: 1;
-      }
-      .aurora-card:hover { 
-        --glow-opacity: 1; 
-        transform: translateY(-4px) scale(1.02);
-      }
       
-      .border-glow {
+      .bento-card:hover {
+        border-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .bento-span-2 { grid-column: span 1; }
+      @media (min-width: 768px) {
+        .bento-span-2 { grid-column: span 2; }
+        .bento-span-3 { grid-column: span 3; }
+        .bento-row-2 { grid-row: span 2; }
+      }
+
+      /* Istanbul Style Typography */
+      .display-heading {
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 0.95;
+      }
+
+      /* Pipeline Infographic Lines */
+      .pipeline-line {
         position: absolute;
-        inset: -1px; /* Cover the border */
-        border-radius: inherit;
-        padding: 1px;
-        -webkit-mask: 
-          linear-gradient(#fff 0 0) content-box, 
-          linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask-composite: exclude;
-        background: radial-gradient(
-          circle 250px at var(--glow-x) var(--glow-y),
-          var(--card-glow-border), transparent 70%
-        );
-        opacity: var(--glow-opacity);
-        transition: opacity 0.4s ease-out;
-        pointer-events: none;
+        background: linear-gradient(180deg, var(--border-color) 0%, var(--accent) 50%, var(--border-color) 100%);
+        width: 1px;
+        left: 50%;
+        top: 0;
+        bottom: 0;
         z-index: 0;
       }
-      .aurora-card > * {
-        position: relative;
-        z-index: 2;
-      }
-
-      /* --- NEW System Diagram Styles --- */
-      .system-graph-layout-container {
-        display: grid;
-        grid-template-columns: 2.5fr 1fr;
-        gap: 2rem;
-        align-items: start;
-      }
-      @media (max-width: 1024px) {
-        .system-graph-layout-container { grid-template-columns: 1fr; gap: 2.5rem; }
-      }
-
-      .system-diagram {
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          gap: 1rem;
-          position: relative;
-          padding: 2rem 1rem;
-      }
-      @media (max-width: 1024px) {
-          .system-diagram {
-              grid-template-columns: 1fr;
-              gap: 2rem;
-          }
-      }
-
-      .phase-column {
-          display: flex;
-          flex-direction: column;
-          gap: 1.5rem;
-          z-index: 10;
-      }
-
-      .phase-header {
-          text-align: center;
-          padding-bottom: 0.75rem;
-          border-bottom: 2px solid;
-          margin-bottom: 0.5rem;
-      }
-      .phase-header h3 {
-          font-size: 0.875rem;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          white-space: nowrap;
-      }
-
-      .tool-node-card {
-          display: flex;
-          align-items: center;
-          gap: 0.75rem;
-          padding: 0.75rem;
-          background-color: var(--bg-soft);
-          border: 1px solid var(--border-main);
-          border-radius: 0.75rem;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          z-index: 10;
-          position: relative; /* For ref positioning */
-      }
-      .tool-node-card:hover {
-          transform: scale(1.05);
-          border-color: var(--accent-primary);
-          background-color: color-mix(in srgb, var(--bg-soft) 90%, var(--accent-primary));
-      }
-      .tool-node-card.selected {
-          transform: scale(1.05);
-          border-color: var(--accent-secondary);
-          box-shadow: 0 0 20px color-mix(in srgb, var(--accent-secondary) 30%, transparent);
-          background-color: color-mix(in srgb, var(--bg-soft) 80%, var(--accent-secondary));
-      }
-      .tool-node-card.dimmed {
-          opacity: 0.4;
-          filter: grayscale(50%);
-      }
-      .tool-node-card.peer {
-          opacity: 1;
-          filter: grayscale(0%);
-      }
-
-      .tool-node-icon-wrapper {
-          flex-shrink: 0;
-          width: 2.5rem;
-          height: 2.5rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 0.5rem;
-          transition: background-color 0.3s;
-      }
-      .tool-node-card .tool-node-icon-wrapper {
-        background-color: color-mix(in srgb, var(--bg-icon-wrapper) 50%, transparent);
-      }
-      .tool-node-card.selected .tool-node-icon-wrapper,
-      .tool-node-card:hover .tool-node-icon-wrapper {
-          background-color: var(--bg-icon-wrapper);
-      }
-
-      .tool-node-name {
-          font-size: 0.875rem;
-          font-weight: 600;
-          color: var(--text-heading);
-          line-height: 1.2;
-      }
-
-      .svg-connector-layer {
-          position: absolute;
-          top: 0; left: 0;
-          width: 100%; height: 100%;
-          pointer-events: none;
-          z-index: 5;
-          overflow: visible;
-      }
-
-      @keyframes dash-flow { to { stroke-dashoffset: -20; } }
-      .connector-path {
-          stroke-width: 2px;
-          fill: none;
-          transition: all 0.4s ease;
-          stroke-dasharray: 4 6;
-          animation: dash-flow 1.5s linear infinite;
-          animation-play-state: paused;
-          opacity: 0.1;
-      }
-       .connector-path.visible {
-          opacity: 0.6;
-       }
-      .connector-path.active {
-          stroke-width: 3px;
-          animation-play-state: running;
-          opacity: 1 !important;
-      }
       
-      .graph-info-panel {
-        transition: opacity 0.4s ease, transform 0.4s ease;
-      }
-      .graph-info-panel.hidden {
-        opacity: 0;
-        transform: scale(0.95) translateX(10px);
-        pointer-events: none;
-      }
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: var(--bg-main); }
+      ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
     </style>
   <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.1.1",
     "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
-    "react/": "https://esm.sh/react@^19.1.1/"
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai"
   }
 }
 </script>
 </head>
-  <body class="overflow-x-hidden">
-    <div id="background-mesh"></div>
+  <body>
+    <div class="noise-overlay"></div>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
