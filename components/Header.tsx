@@ -1,18 +1,17 @@
-
 import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <header className="fixed top-0 w-full z-50 bg-nexus-black/60 backdrop-blur-xl border-b border-white/5 supports-[backdrop-filter]:bg-nexus-black/30">
+    <header className="fixed top-0 w-full z-50 bg-nexus-black/60 backdrop-blur-xl border-b border-white/5 supports-[backdrop-filter]:bg-nexus-black/30 transition-all duration-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1400px]">
         <div className="flex items-center justify-between h-24">
           
           {/* Logo & Attribution Section */}
           <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-6">
             <a href="#" className="flex items-center gap-3 group">
-               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center group-hover:bg-nexus-accent transition-colors duration-300 shadow-[0_0_15px_rgba(255,255,255,0.2)]">
-                  <svg className="w-5 h-5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+               <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center group-hover:bg-nexus-accent transition-colors duration-300 shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                  <svg className="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                   </svg>
                </div>
                <span className="text-xl font-display font-black tracking-tighter text-white">NEXUS<span className="text-nexus-accent">.AI</span></span>
